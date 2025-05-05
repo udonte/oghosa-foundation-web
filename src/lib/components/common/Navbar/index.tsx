@@ -1,16 +1,5 @@
 import React, { useState } from "react";
-import {
-  FiMenu,
-  FiX,
-  FiChevronDown,
-  FiChevronRight,
-  FiHome,
-  FiInfo,
-  FiUser,
-  FiSettings,
-  FiMail,
-  FiHelpCircle,
-} from "react-icons/fi";
+import { FiMenu, FiX, FiChevronDown, FiChevronRight } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
 import { NavLink, useLocation } from "react-router-dom";
 import Logo from "@/assets/nav/logo.png";
