@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --default-font-family: "Cabin", system-ui;
+  --color-oghosa-gold: #cfa33a;
+  --color-oghosa-green: #006633;
+  --font-dmsans: "Cabin", system-ui;
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-pacifico: "Pacifico", cursive;
+}
