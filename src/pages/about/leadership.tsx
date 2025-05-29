@@ -11,7 +11,7 @@ import ExecutiveDirector from "@/assets/images/lead1.jpg";
 import ProgramDirector from "@/assets/images/lead3.jpg";
 import BoardChair from "@/assets/images/esohe.jpg";
 import Team from "@/assets/images/team.jpg";
-import { FiPlay, FiPause, FiVolume2, FiVolumeX } from "react-icons/fi";
+import SubHeroSection from "@/lib/components/common/SubHeroSection";
 
 const Leadership = () => {
   const executiveTeam = [
@@ -126,40 +126,11 @@ const Leadership = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <section className="relative bg-oghosa-green text-white py-24 overflow-hidden">
-        <div className="absolute inset-0  opacity-20 ">
-          <img
-            src={Team}
-            alt="team photo"
-            className="w-full h-full object-cover "
-          />
-        </div>
-        <div className="container mx-auto px-4 relative z-10 text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="font-montserrat text-4xl md:text-5xl font-bold mb-4"
-          >
-            Our Leadership
-          </motion.h1>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-            className="w-24 h-1 bg-oghosa-gold mx-auto mb-6"
-          ></motion.div>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 0.6 }}
-            className="font-dmsans text-xl md:text-2xl max-w-3xl mx-auto"
-          >
-            Guided by experienced professionals committed to Oghosa's vision
-          </motion.p>
-        </div>
-      </section>
+      <SubHeroSection
+        image={Team}
+        title=" Our Leadership"
+        subtitle="Guided by experienced professionals committed to Oghosa's vision"
+      />
 
       {/* Main Content */}
       <div className="container mx-auto px-4 py-16 max-w-6xl">
@@ -268,7 +239,7 @@ const Leadership = () => {
                 <div className="bg-oghosa-green/10 p-6 rounded-xl mb-8 text-center w-1/2 border-2 border-oghosa-green/30">
                   <FiUsers className="text-oghosa-green text-3xl mx-auto mb-3" />
                   <h3 className="font-montserrat font-bold text-oghosa-green">
-                    Board of Directors
+                    Board of Trustees
                   </h3>
                   <p className="font-dmsans text-gray-600">
                     Governance & Strategic Oversight
@@ -313,7 +284,7 @@ const Leadership = () => {
             <div className="lg:hidden space-y-6">
               {[
                 {
-                  level: "Board of Directors",
+                  level: "Board of Trustees",
                   role: "Governance & Strategic Oversight",
                   icon: <FiUsers className="text-oghosa-green text-2xl" />,
                 },
@@ -340,7 +311,7 @@ const Leadership = () => {
           </div>
         </motion.section>
 
-        {/* Board of Directors */}
+        {/* Board of Trustees */}
         <motion.section
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -349,7 +320,7 @@ const Leadership = () => {
           className="mb-24"
         >
           <h2 className="font-montserrat text-3xl font-bold text-oghosa-green mb-12 text-center">
-            Board of Directors
+            Board of Trustees
           </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

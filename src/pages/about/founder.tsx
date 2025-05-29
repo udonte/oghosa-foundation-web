@@ -59,6 +59,32 @@ const Founder = () => {
       description:
         "Focused on giving people tools to transform their own lives",
     },
+
+    {
+      icon: <FiArrowRight className="text-oghosa-gold text-2xl" />,
+      title: "Innovation",
+      description:
+        "Embraced technology as a means to solve social issues and improve lives",
+    },
+    {
+      icon: <FiCalendar className="text-oghosa-gold text-2xl" />,
+      title: "Sustainability",
+      description:
+        "Believed in creating lasting change through community involvement",
+    },
+    {
+      icon: <FiHeart className="text-oghosa-gold text-2xl" />,
+      title: "Inclusivity",
+      description:
+        "Advocated for equal opportunities for all, regardless of background",
+    },
+
+    {
+      icon: <FiAward className="text-oghosa-gold text-2xl" />,
+      title: "Integrity",
+      description:
+        "Conducted all initiatives with transparency and accountability",
+    },
     // Add other principles...
   ];
 
@@ -157,13 +183,16 @@ const Founder = () => {
             <div className="bg-white/90 p-8 rounded-xl shadow-md relative">
               <BsQuote className="absolute top-6 left-6 text-oghosa-gold/50 text-5xl" />
               <h2 className="font-montserrat text-3xl font-bold text-oghosa-green mb-6 relative z-10">
-                "It Will Be" (IWB)
+                It Will Be (IWB)
               </h2>
+              <BsQuote className="absolute top-6 left-6 text-oghosa-gold/50 text-5xl" />
+
               <div className="font-dmsans text-gray-700 text-lg leading-relaxed space-y-4 relative z-10">
                 <p>
-                  Oghosa Godson was a true friend to all, embodying kindness,
-                  humility, and an unwavering commitment to humanity. He lived a
-                  life of selfless generosity, offering help without
+                  Oghosa Godson - my beloved younger brother, was not just
+                  family - he was a beacon of kindness, a true friend to all,
+                  embodying humility, and an unwavering commitment to humanity.
+                  He lived a life of selfless generosity, offering help without
                   discrimination and always meeting people at their level.
                   Whether it was a struggling family in a rural community, a
                   friend in need, or an elderly person requiring assistance,
@@ -197,7 +226,14 @@ const Founder = () => {
                   impact, ensuring that his vision of a better, more
                   compassionate world lives on.
                 </p>
+                <p>
+                  This Foundation is not just a tribute, but a call to action -
+                  to live with the same openness, care and generosity that
+                  defined Oghosa's life. We invite you to join us in this
+                  mission, and to make a difference in the lives of others.
+                </p>
               </div>
+              <button>Join us</button>
             </div>
           </motion.div>
         </div>

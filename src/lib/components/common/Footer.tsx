@@ -13,26 +13,23 @@ import { motion } from "framer-motion";
 // Mock data for navigation items
 const footerLinks = {
   about: [
-    { name: "Our Vision & Values", path: "/vision-values" },
-    { name: "Our History", path: "/history" },
+    { name: "Our Profile", path: "/about/profile" },
     { name: "Our Leadership", path: "/leadership" },
-    { name: "Our Structure", path: "/structure" },
+    { name: "Reports", path: "/about/leadership" },
     { name: "Our Partners", path: "/partners" },
-    { name: "Accountability", path: "/accountability" },
-    { name: "FAQ", path: "/faq" },
+    { name: "FAQs", path: "/faq" },
   ],
-  approaches: [
-    { name: "Child Sponsorship", path: "/child-sponsorship" },
-    { name: "Global Campaign", path: "/global-campaign" },
-    { name: "Our Global Strategy", path: "/global-strategy" },
-    { name: "The Role of Faith", path: "/role-of-faith" },
+  work: [
+    { name: "Education", path: "/child-sponsorship" },
+    { name: "Sickle Cell Support", path: "/global-campaign" },
+    { name: "Food Security", path: "/global-strategy" },
+    { name: "Skills Training", path: "/role-of-faith" },
   ],
   workWithUs: [
-    { name: "Our Culture", path: "/culture" },
+    { name: "Our Communities", path: "/culture" },
+    { name: "Impact Areas", path: "/open-positions" },
+    { name: "Partnerships", path: "/tenders" },
     { name: "Careers & Internships", path: "/careers" },
-    { name: "Explore Open Positions", path: "/open-positions" },
-    { name: "Internships", path: "/internships" },
-    { name: "Open Tenders", path: "/tenders" },
   ],
   legal: [
     { name: "Privacy Policy", path: "/privacy" },
@@ -83,10 +80,10 @@ const Footer = () => {
           {/* Our Work Section */}
           <motion.div className="space-y-4">
             <h3 className="text-xl font-bold text-oghosa-green">
-              Our Approaches
+              Our Programs
             </h3>
             <ul className="space-y-2">
-              {footerLinks.approaches.map((item, index) => (
+              {footerLinks.work.map((item, index) => (
                 <motion.li
                   key={index}
                   whileHover={{ x: 5 }}
@@ -201,7 +198,7 @@ const Footer = () => {
                 to={"/"}
                 className="text-oghosa-gold/50 hover:text-oghosa-gold/70 inline-flex items-center gap-1 transition w-fit"
               >
-                Back to Top <FaArrowAltCircleUp />
+                Back to Home <FaArrowAltCircleUp />
               </Link>
             </div>
           </div>
