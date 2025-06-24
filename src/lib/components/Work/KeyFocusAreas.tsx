@@ -1,27 +1,9 @@
 // src/components/education/KeyFocusAreas.tsx
 import { motion } from "framer-motion";
-import {
-  FaGraduationCap,
-  FaLaptop,
-  FaChalkboardTeacher,
-  FaBook,
-  FaFemale,
-  FaUsers,
-  FaSeedling,
-  FaHeartbeat,
-} from "react-icons/fa";
-import { MdComputer, MdScience, MdAccessibility } from "react-icons/md";
-import SectionHeader from "../SectionHeader";
 
-interface FocusArea {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-  initiatives: string[];
-}
+import SectionHeader from "../common/SectionHeader";
 
-const KeyFocusAreas = () => {
-  // Animation variants
+const KeyFocusAreas = ({ focusAreas }) => {
   const container = {
     hidden: { opacity: 0 },
     visible: {
@@ -46,76 +28,6 @@ const KeyFocusAreas = () => {
     },
   };
 
-  const focusAreas: FocusArea[] = [
-    {
-      icon: <FaGraduationCap className="text-3xl" />,
-      title: "Scholarship Programs",
-      description:
-        "Comprehensive support for deserving students at all education levels",
-      initiatives: [
-        "Full tuition coverage",
-        "Mentorship pairing",
-        "Career readiness workshops",
-        "Alumni network",
-      ],
-    },
-    {
-      icon: <FaLaptop className="text-3xl" />,
-      title: "Digital Literacy",
-      description: "Bridging the technology gap in underserved communities",
-      initiatives: [
-        "Computer labs setup",
-        "Coding bootcamps",
-        "E-learning platforms",
-        "Digital skills certification",
-      ],
-    },
-    {
-      icon: <FaChalkboardTeacher className="text-3xl" />,
-      title: "Teacher Development",
-      description: "Professional growth programs for educators",
-      initiatives: [
-        "Pedagogy workshops",
-        "STEM training",
-        "Leadership development",
-        "Classroom resources",
-      ],
-    },
-    {
-      icon: <FaFemale className="text-3xl" />,
-      title: "Girls' Education",
-      description: "Special initiatives to support female students",
-      initiatives: [
-        "STEM scholarships",
-        "Menstrual health programs",
-        "Safety training",
-        "Women mentors",
-      ],
-    },
-    {
-      icon: <FaUsers className="text-3xl" />,
-      title: "Adult Education",
-      description: "Literacy and vocational training programs",
-      initiatives: [
-        "Basic literacy classes",
-        "Financial literacy",
-        "Vocational certification",
-        "Small business training",
-      ],
-    },
-    {
-      icon: <MdScience className="text-3xl" />,
-      title: "STEM Education",
-      description: "Advancing science and technology education",
-      initiatives: [
-        "Robotics clubs",
-        "Science equipment grants",
-        "University partnerships",
-        "Research opportunities",
-      ],
-    },
-  ];
-
   return (
     <motion.section
       initial="hidden"
@@ -127,14 +39,14 @@ const KeyFocusAreas = () => {
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Header */}
         <SectionHeader
-          title=" Our Key Focus Areas"
+          title="Focus Areas"
           subtitle=" We address education holistically through targeted programs that
             create lasting impact"
         />
 
         {/* Focus Areas Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {focusAreas.map((area, index) => (
+          {focusAreas.map((area, index: number) => (
             <motion.div
               key={index}
               variants={item}
@@ -149,9 +61,9 @@ const KeyFocusAreas = () => {
                 className={`bg-oghosa-gold/20 text-oghosa-green p-6 flex items-center gap-4`}
               >
                 <div
-                  className={`p-3 rounded-full bg-oghosa-green/5 text-oghosa-gold`}
+                  className={`p-3 rounded-full bg-oghosa-green/5 text-oghosa-gold text-3xl`}
                 >
-                  {area.icon}
+                  {<area.icon />}
                 </div>
                 <h3 className="text-xl font-bold font-montserrat">
                   {area.title}
@@ -171,9 +83,7 @@ const KeyFocusAreas = () => {
                   <ul className="space-y-2">
                     {area.initiatives.map((initiative, i) => (
                       <li key={i} className="flex items-start">
-                        <span className="text-[var(--color-oghosa-gold)] mr-2">
-                          •
-                        </span>
+                        <span className="text-oghosa-gold mr-2">•</span>
                         <span className="font-dmsans text-gray-700">
                           {initiative}
                         </span>
@@ -185,22 +95,6 @@ const KeyFocusAreas = () => {
             </motion.div>
           ))}
         </div>
-
-        {/* Impact Note */}
-        <motion.div
-          variants={item}
-          className="mt-16 bg-gradient-to-r from-oghosa-green to-oghosa-gold text-white rounded-xl p-8 text-center"
-        >
-          <h3 className="text-2xl font-bold font-montserrat mb-4">
-            Integrated Approach to Education
-          </h3>
-          <p className="font-dmsans max-w-4xl mx-auto">
-            Our programs work synergistically to address all aspects of
-            educational development - from infrastructure and teacher training
-            to student support and community engagement, creating a
-            comprehensive ecosystem for learning.
-          </p>
-        </motion.div>
       </div>
     </motion.section>
   );

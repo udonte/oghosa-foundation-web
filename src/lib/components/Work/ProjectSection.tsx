@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { FiArrowRight, FiCalendar, FiMapPin } from "react-icons/fi";
-import { Project, ProjectsSectionProps } from "../types/work";
-import SectionHeader from "./SectionHeader";
+import { Project, ProjectsSectionProps } from "../../types/work";
+import SectionHeader from "../common/SectionHeader";
 
 const ProjectsSection = ({
   title = "Our Projects",

@@ -1,17 +1,15 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
-import { FAQSectionProps } from "../types/work";
-import SectionHeader from "./SectionHeader";
+import { FAQSectionProps } from "../../types/work";
+import SectionHeader from "../common/SectionHeader";
 
 const FAQSection = ({
-  title = "FAQs",
-  subtitle = "Address common concerns or inquiries to reduce friction",
+  title = "",
+  subtitle = "",
   items = [],
-  containerClass = "",
   itemClass = "",
-  questionClass = "",
-  answerClass = "",
+
   defaultOpenId = null,
 }: FAQSectionProps) => {
   const [openId, setOpenId] = useState<string | number | null>(defaultOpenId);
@@ -21,7 +19,7 @@ const FAQSection = ({
   };
 
   return (
-    <section className={`py-16 bg-white ${containerClass}`}>
+    <section className={`py-16 bg-white`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -53,7 +51,7 @@ const FAQSection = ({
                 >
                   <button
                     onClick={() => toggleItem(item.id)}
-                    className={`w-full flex justify-between items-center p-6 text-left cursor-pointer ${questionClass} ${
+                    className={`w-full flex justify-between items-center p-6 text-left cursor-pointer ${
                       openId === item.id
                         ? "bg-oghosa-green/5 text-oghosa-green"
                         : "bg-white/ text-gray-900 hover:bg-oghosa-green/5 hover:text-oghosa-green"
@@ -79,7 +77,7 @@ const FAQSection = ({
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.3 }}
-                        className={`overflow-hidden ${answerClass}`}
+                        className={`overflow-hidden`}
                       >
                         <div className="p-6 pt-2 font-dmsans text-gray-600">
                           {item.answer}

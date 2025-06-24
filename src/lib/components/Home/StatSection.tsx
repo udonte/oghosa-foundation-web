@@ -24,33 +24,33 @@ const StatsSection = () => {
       value: 10250,
       suffix: "+",
       label: "Lives Impacted",
-      icon: <FiUsers className="stat-icon" />,
+      icon: <FiUsers />,
     },
     {
       id: 2,
       value: 58,
       suffix: "+",
       label: "Communities Served",
-      icon: <FiMapPin className="stat-icon" />,
+      icon: <FiMapPin />,
     },
     {
       id: 3,
       value: 632,
       suffix: "+",
       label: "Sickle Cell Screenings",
-      icon: <FiDroplet className="stat-icon" />,
+      icon: <FiDroplet />,
     },
     {
       id: 4,
       value: 1250,
       suffix: "+",
       label: "Meals Served Monthly",
-      icon: <FiPackage className="stat-icon" />,
+      icon: <FiPackage />,
     },
   ];
 
-  const donationGoal = 500000; // 500,000 NGN target
-  const [currentDonations, setCurrentDonations] = useState(325000); // 325,000 NGN raised
+  const donationGoal = 500000;
+  const [currentDonations] = useState(325000);
   const [activeStatIndex, setActiveStatIndex] = useState(0);
 
   // Rotate through stats every 2 seconds
@@ -59,7 +59,7 @@ const StatsSection = () => {
       setActiveStatIndex((prev) => (prev + 1) % mockStats.length);
     }, 2000);
     return () => clearInterval(interval);
-  }, []);
+  }, [mockStats.length]);
 
   return (
     <section className="py-16 bg-white">

@@ -21,7 +21,7 @@ import Program5 from "@/assets/images/work/programs/work5.jpg";
 import Program6 from "@/assets/images/work/programs/work6.jpg";
 import Program7 from "@/assets/images/work/programs/work2.jpg";
 import SubHeroSection from "@/lib/components/common/SubHeroSection";
-import SectionHeader from "@/lib/components/SectionHeader";
+import SectionHeader from "@/lib/components/common/SectionHeader";
 
 const Work = () => {
   const programs: Program[] = [

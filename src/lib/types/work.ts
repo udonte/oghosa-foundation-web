@@ -1,24 +1,81 @@
-// src/lib/types/work.ts
+import { IconType } from 'react-icons';
 import { ReactNode } from "react";
 
-export interface ProgramStat {
-  value: string;
-  label: string;
+export interface EducationPillar {
+    icon: ReactNode;
+    title: string;
+    description: string;
+  }
+
+  export interface FocusArea {
+    icon: IconType;
+    title: string;
+    description: string;
+    initiatives: string[];
+  }
+
+  export interface StatItem {
+    id: number | string;
+    value: number;
+    label: string;
+    icon: IconType;
+    suffix?: string;
+  }
+  
+  export interface ImpactSectionProps {
+    stats?: StatItem[];
+    title?: string;
+    subtitle?: string;
+    animationSpeed?: number;
+    rotationInterval?: number;
+    activeCardClass?: string;
+    inactiveCardClass?: string;
+    containerClass?: string;
+    titleClass?: string;
+    subtitleClass?: string;
+  }
+
+  export interface StatCardProps {
+    stat: StatItem;
+    isActive: boolean;
+    animationSpeed: number;
+    activeClass: string;
+    inactiveClass: string;
+  }
+
+export interface FAQItem {
+  id: number;
+  question: string;
+  answer: string;
 }
 
-export interface Program {
-  label: string;
-  page: string;
-  description: string;
-  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+
+export interface GalleryItems {
+  id: number;
   image: string;
-  stats?: ProgramStat[];
-  featured?: boolean;
-  cta?: ReactNode;
+  description: string;
 }
 
-export interface Project {
-  id: string | number;
+export interface GallerySectionProps {
+  title: string;
+  subtitle: string;
+  items: GalleryItems[]
+  columns: number
+  gap: string,
+  imageHeight: string,
+  showDescriptions?: boolean;
+}
+
+export interface Testimonials {
+  id: number;
+  image: string;
+  name: string;
+  role: string;
+  quote: string;
+}
+
+export interface Projects {
+  id: number;
   title: string;
   description: string;
   location: string;
@@ -26,86 +83,4 @@ export interface Project {
   imageUrl: string;
   tags: string[];
   status: string;
-  link?: string;
-}
-
-export interface ProjectsSectionProps {
-  title?: string;
-  subtitle?: string;
-  projects: Project[];
-  ongoingTitle?: string;
-  completedTitle?: string;
-  ctaText?: string;
-  containerClass?: string;
-  cardClass?: string;
-  tagClass?: string;
-  showViewAll?: boolean;
-  viewAllLink?: string;
-}
-
-// src/lib/types/testimonials.ts
-import { IconType } from "react-icons";
-
-export interface Testimonial {
-  id: string | number;
-  image: string;
-  name: string;
-  role?: string; // Optional role/position
-  quote: string;
-}
-
-export interface TestimonialsSectionProps {
-  testimonials: Testimonial[];
-  title?: string;
-  subtitle?: string;
-  autoRotate?: boolean; // Enable/disable auto-rotation
-  rotationInterval?: number; // Rotation speed in ms
-  showNavigation?: boolean; // Show/hide arrows
-  containerClass?: string; // Additional container classes
-  cardClass?: string; // Additional card classes
-}
-
-export interface TestimonialsProps {
-  title?: string;
-  subtitle?: string;
-  testimonials: Testimonial[];
-  variant?: "default" | "card" | "minimal";
-  cols?: 1 | 2 | 3;
-  className?: string;
-}
-
-export interface GalleryItem {
-  id: string | number;
-  image: string;
-  description: string;
-  altText?: string;
-}
-
-export interface GallerySectionProps {
-  title?: string;
-  subtitle?: string;
-  items: GalleryItem[];
-  columns?: number; // 1-5
-  gap?: string; // Tailwind gap class
-  imageHeight?: string; // Tailwind height class
-  showDescriptions?: boolean;
-  enableZoom?: boolean;
-  containerClass?: string;
-}
-
-export interface FAQItem {
-  id: string | number;
-  question: string;
-  answer: string;
-}
-
-export interface FAQSectionProps {
-  title?: string;
-  subtitle?: string;
-  items: FAQItem[];
-  containerClass?: string;
-  itemClass?: string;
-  questionClass?: string;
-  answerClass?: string;
-  defaultOpenId?: string | number | null;
 }

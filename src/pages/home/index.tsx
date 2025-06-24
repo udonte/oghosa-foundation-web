@@ -50,7 +50,6 @@ const Home = () => {
       <PartnerShowcase />
       <EventSection />
       <CTASection />
-      {/* Other sections... */}
     </main>
   );
 };

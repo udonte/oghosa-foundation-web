@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { BsQuote } from "react-icons/bs";
-import SectionHeader from "./SectionHeader";
+import SectionHeader from "../common/SectionHeader";
 
 interface Testimonial {
   id: string | number;
@@ -35,9 +35,9 @@ const TestimonialsSection = ({
 }: TestimonialsSectionProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const nextTestimonial = () => {
+  const nextTestimonial = useCallback(() => {
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  };
+  }, [testimonials.length]);
 
   const prevTestimonial = () => {
     setCurrentIndex(
@@ -50,7 +50,7 @@ const TestimonialsSection = ({
 
     const interval = setInterval(nextTestimonial, rotationInterval);
     return () => clearInterval(interval);
-  }, [testimonials.length, autoRotate, rotationInterval]);
+  }, [testimonials.length, autoRotate, rotationInterval, nextTestimonial]);
 
   if (testimonials.length === 0) return null;
 

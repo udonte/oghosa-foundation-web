@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import EducationHero from "@/assets/images/education-program1.jpg";
 import { MdCastForEducation } from "react-icons/md";
 import { FaLightbulb, FaUsers } from "react-icons/fa";
 
@@ -42,7 +41,7 @@ const educationPillars = [
   },
 ];
 
-const MissionSection = () => {
+const EducationMissionSection = () => {
   return (
     <motion.section
       id="education-mission"
@@ -104,14 +103,14 @@ const MissionSection = () => {
                 key={index}
                 variants={item}
                 whileHover={{ scale: 1.03 }}
-                className="bg-white p-6 rounded-lg shadow-md flex items-start gap-6 border-l-4 border-[var(--color-oghosa-gold)]"
+                className="bg-white p-6 rounded-lg shadow-md flex items-start gap-6 border-l-4 border-oghosa-gold"
               >
-                <div className="flex-shrink-0">{pillar.icon}</div>
+                <div className="flex-shrink-0 ">{pillar.icon}</div>
                 <div>
-                  <h3 className="text-xl font-bold font-montserrat text-[var(--color-oghosa-green)] mb-2">
+                  <h3 className="text-xl font-bold font-montserrat text-oghosa-green mb-2">
                     {pillar.title}
                   </h3>
-                  <p className="font-[var(--font-dmsans)] text-gray-600">
+                  <p className="font-dmsans text-gray-600">
                     {pillar.description}
                   </p>
                 </div>
@@ -119,34 +118,9 @@ const MissionSection = () => {
             ))}
           </motion.div>
         </div>
-        <div className="mt-12">
-          <motion.div
-            variants={item}
-            className="relative overflow-hidden shadow-2xl"
-          >
-            <img
-              src={EducationHero}
-              alt="Education Mission"
-              className="w-full h-auto object-cover"
-            />
-            <div className="absolute inset-0  flex items-end p-8">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.6 }}
-                className="text-white"
-              >
-                <p className="text-sm uppercase tracking-wider mb-2">
-                  Free Education program for kids at Kano State
-                </p>
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
       </div>
     </motion.section>
   );
 };
 
-export default MissionSection;
+export default EducationMissionSection;

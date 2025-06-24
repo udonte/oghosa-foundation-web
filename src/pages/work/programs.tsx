@@ -8,7 +8,7 @@ import ProgramTemplate from "@/lib/components/Work/ProgramTemplate";
 import { Link } from "react-router";
 import SubHeroSection from "@/lib/components/common/SubHeroSection";
 import HeroImage from "@/assets/images/work/programs/work5.jpg";
-import SectionHeader from "@/lib/components/SectionHeader";
+import SectionHeader from "@/lib/components/common/SectionHeader";
 import Program1 from "@/assets/images/work/work1.jpg";
 import Program2 from "@/assets/images/work/work2.jpg";
 import Program3 from "@/assets/images/work/work3.jpg";

@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
-import { FiZoomIn } from "react-icons/fi";
-import { GallerySectionProps } from "../types/work";
-import SectionHeader from "./SectionHeader";
+import SectionHeader from "../common/SectionHeader";
+import { GallerySectionProps } from "@/lib/types/work";
 
 const GallerySection = ({
   title = "Gallery",
@@ -11,8 +10,6 @@ const GallerySection = ({
   gap = "gap-4",
   imageHeight = "h-64",
   showDescriptions = true,
-  enableZoom = true,
-  containerClass = "",
 }: GallerySectionProps) => {
   const gridCols =
     {
@@ -24,9 +21,7 @@ const GallerySection = ({
     }[columns] || "grid-cols-3";
 
   return (
-    <section
-      className={`px:4 py-8 lg:px-16 lg:py-16 bg-white ${containerClass}`}
-    >
+    <section className={`px:4 py-8 lg:px-16 lg:py-16 bg-white`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <SectionHeader title={title} subtitle={subtitle} />
@@ -47,16 +42,9 @@ const GallerySection = ({
                 >
                   <img
                     src={item.image}
-                    alt={item.altText || item.description}
+                    alt={item.description}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-
-                  {/* Overlay */}
-                  {/* <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    {enableZoom && (
-                      <FiZoomIn className="text-white text-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    )}
-                  </div> */}
                 </div>
 
                 {showDescriptions && (
