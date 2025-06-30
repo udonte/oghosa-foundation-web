@@ -285,3 +285,5 @@ import EduGallery6 from "@/assets/images/work/education/school-renovation.jpg";
         "Yes, all our school programs include a daily nutritious meal through our School Feeding Initiative. We also conduct regular health check-ups and nutrition education for students and parents.",
     },
   ];
+
+  

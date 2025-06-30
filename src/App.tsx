@@ -13,6 +13,7 @@ import Health from "@/pages/work/health";
 import SickleCell from "@/pages/work/sickleCell";
 import Food from "@/pages/work/food";
 import SkillsTraining from "@/pages/work/skillsTraining";
+import Outreach from "@/pages/work/outreach";
 
 const App = () => {
   return (
@@ -35,6 +36,7 @@ const App = () => {
           <Route path="/work/sickle-cell" element={<SickleCell />} />
           <Route path="/work/food" element={<Food />} />
           <Route path="/work/skills-training" element={<SkillsTraining />} />
+          <Route path="/work/outreach" element={<Outreach />} />
         </Route>
       </Routes>
     </Router>
