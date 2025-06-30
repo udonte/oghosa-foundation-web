@@ -5,20 +5,15 @@ import { FAQItem, FocusArea,   GalleryItems,   Projects,   StatItem, Testimonial
 import { FiUsers } from 'react-icons/fi';
 import { FaChalkboardTeacher, FaFemale, FaGraduationCap, FaLaptop, FaUsers } from 'react-icons/fa';
 import { MdScience } from 'react-icons/md';
-import EduGallery1 from "@/assets/images/work/programs/work1.jpg";
-import EduGallery2 from "@/assets/images/work/programs/work2.jpg";
-import EduGallery3 from "@/assets/images/work/programs/work3.jpg";
-import EduGallery4 from "@/assets/images/work/programs/work4.jpg";
-import EduGallery5 from "@/assets/images/work/programs/work5.jpg";
-import EduGallery6 from "@/assets/images/work/programs/work6.jpg";
-import ProjectImage1 from "@/assets/images/education-program1.jpg";
-import ProjectImage2 from "@/assets/images/education-program1.jpg";
-
-
-
+import EduGallery1 from "@/assets/images/work/education/school-supplies.jpg";
+import EduGallery2 from "@/assets/images/work/education/coding.jpg";
+import EduGallery3 from "@/assets/images/work/education/teacher-training.png";
+import EduGallery4 from "@/assets/images/work/education/learning-center.png";
+import EduGallery5 from "@/assets/images/work/education/back-to-school.jpg";
+import EduGallery6 from "@/assets/images/work/education/school-renovation.jpg";
 
   
-  export const impactStatsData: StatItem[] = [
+  export const eduStatsData: StatItem[] = [
     {
       id: 1,
       value: 100,
@@ -49,7 +44,7 @@ import ProjectImage2 from "@/assets/images/education-program1.jpg";
     },
   ];
 
-  export const focusAreas: FocusArea[] = [
+  export const educationFocusAreas: FocusArea[] = [
     {
       icon: FaGraduationCap,
       title: "Scholarship Programs",
@@ -152,7 +147,7 @@ import ProjectImage2 from "@/assets/images/education-program1.jpg";
     },
   ];
 
-  export const testimonials: Testimonials[] = [
+  export const eduTestimonials: Testimonials[] = [
     {
       id: 1,
       image: EduGallery1,
@@ -171,14 +166,14 @@ import ProjectImage2 from "@/assets/images/education-program1.jpg";
     },
   ];
 
-  export const projects: Projects[] = [
+  export const eduProjects: Projects[] = [
     {
       id: 1,
       title: "School Supplies Initiative",
       description: "Providing teaching supplies to in underserved communities",
       location: "Northern Nigeria",
       date: "2022 - Present",
-      imageUrl: ProjectImage1,
+      imageUrl: EduGallery1,
       tags: ["Teaching", "School"],
       status: "ongoing",
     },
@@ -189,7 +184,7 @@ import ProjectImage2 from "@/assets/images/education-program1.jpg";
         "Empowering children with digital skills through coding workshops",
       location: "Eastern Region",
       date: "2020 - 2021",
-      imageUrl: ProjectImage2,
+      imageUrl: EduGallery2,
       tags: ["Technology", "Education"],
       status: "completed",
     },
@@ -200,7 +195,7 @@ import ProjectImage2 from "@/assets/images/education-program1.jpg";
         "Professional development workshops for teachers in rural areas",
       location: "Southern Nigeria",
       date: "2021 - 2022",
-      imageUrl: ProjectImage1,
+      imageUrl: EduGallery3,
       tags: ["Training", "Education"],
       status: "completed",
     },
@@ -209,7 +204,7 @@ import ProjectImage2 from "@/assets/images/education-program1.jpg";
       title: "Community Learning Centers",
       date: "2020 - Present",
       location: "5 states",
-      imageUrl: ProjectImage2,
+      imageUrl: EduGallery4,
       tags: ["Community", "Education"],
       status: "ongoing",
       description:
@@ -220,7 +215,7 @@ import ProjectImage2 from "@/assets/images/education-program1.jpg";
       title: "Back-to-School Drives",
       date: "Annually since 2018",
       location: "Nationwide",
-      imageUrl: ProjectImage1,
+      imageUrl: EduGallery5,
       tags: ["Education", "Community"],
       status: "ongoing",
       description:
@@ -231,7 +226,7 @@ import ProjectImage2 from "@/assets/images/education-program1.jpg";
       title: "School Renovation Projects",
       date: "2019 - 2022",
       location: "8 schools",
-      imageUrl: ProjectImage1,
+      imageUrl: EduGallery6,
       tags: ["Infrastructure", "Education"],
       status: "completed",
       description:
@@ -239,7 +234,7 @@ import ProjectImage2 from "@/assets/images/education-program1.jpg";
     },
   ];
 
-  export const faqItems: FAQItem[] = [
+  export const eduFaqItems: FAQItem[] = [
     {
       id: 1,
       question: "What age groups do your education programs serve?",

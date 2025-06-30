@@ -9,6 +9,10 @@ import Founder from "@/pages/about/founder";
 import Work from "@/pages/work";
 import Programs from "@/pages/work/programs";
 import Education from "@/pages/work/education";
+import Health from "@/pages/work/health";
+import SickleCell from "@/pages/work/sickleCell";
+import Food from "@/pages/work/food";
+import SkillsTraining from "@/pages/work/skillsTraining";
 
 const App = () => {
   return (
@@ -27,6 +31,10 @@ const App = () => {
           <Route path="/work" element={<Work />} />
           <Route path="/work/programs" element={<Programs />} />
           <Route path="/work/education" element={<Education />} />
+          <Route path="/work/health" element={<Health />} />
+          <Route path="/work/sickle-cell" element={<SickleCell />} />
+          <Route path="/work/food" element={<Food />} />
+          <Route path="/work/skills-training" element={<SkillsTraining />} />
         </Route>
       </Routes>
     </Router>

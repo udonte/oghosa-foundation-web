@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FiMenu, FiX, FiChevronDown, FiChevronRight } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Logo from "@/assets/nav/logo.png";
 import TopHeader from "./TopHeader";
 
@@ -50,7 +50,7 @@ const items = [
       },
       {
         label: "Food Security",
-        page: "/work/food-security",
+        page: "/work/food",
       },
       {
         label: "Skills Training",
@@ -130,25 +130,25 @@ const Navbar: React.FC = () => {
     {}
   );
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
-  const location = useLocation();
-  const isActive = (path: string) => {
-    return location.pathname === path ? "border-b-2 border-oghosa-gold" : "";
-  };
-  const isSubItemActive = (subItems: NavItem[], path: string) => {
-    return subItems.some((subItem) => subItem.page === path)
-      ? "border-b-2 border-oghosa-gold"
-      : "";
-  };
-  const isSubItemHovered = (subItems: NavItem[], label: string) => {
-    return subItems.some((subItem) => subItem.label === label)
-      ? "border-b-2 border-oghosa-gold"
-      : "";
-  };
-  const isSubItemExpanded = (subItems: NavItem[], label: string) => {
-    return subItems.some((subItem) => subItem.label === label)
-      ? "border-b-2 border-oghosa-gold"
-      : "";
-  };
+  // const location = useLocation();
+  // const isActive = (path: string) => {
+  //   return location.pathname === path ? "border-b-2 border-oghosa-gold" : "";
+  // };
+  // const isSubItemActive = (subItems: NavItem[], path: string) => {
+  //   return subItems.some((subItem) => subItem.page === path)
+  //     ? "border-b-2 border-oghosa-gold"
+  //     : "";
+  // };
+  // const isSubItemHovered = (subItems: NavItem[], label: string) => {
+  //   return subItems.some((subItem) => subItem.label === label)
+  //     ? "border-b-2 border-oghosa-gold"
+  //     : "";
+  // };
+  // const isSubItemExpanded = (subItems: NavItem[], label: string) => {
+  //   return subItems.some((subItem) => subItem.label === label)
+  //     ? "border-b-2 border-oghosa-gold"
+  //     : "";
+  // };
 
   const toggleSubMenu = (label: string) => {
     setExpandedItems((prev) => ({

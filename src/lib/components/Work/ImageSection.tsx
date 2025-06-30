@@ -29,7 +29,7 @@ const ImageSection = ({ imageSrc, imageDescription }: ImageSectionProps) => {
             alt={imageDescription}
             className={`w-full h-auto object-cover`}
           />
-          <div className="absolute inset-0  flex items-end p-8">
+          <div className="absolute inset-0  flex items-end p-8 ">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -37,8 +37,8 @@ const ImageSection = ({ imageSrc, imageDescription }: ImageSectionProps) => {
               transition={{ delay: 0.6 }}
               className="text-white"
             >
-              <p className="text-sm uppercase tracking-wider mb-2">
-                Free Education program for kids at Kano State
+              <p className="text-xl uppercase font-bold tracking-wider mb-2 bg-oghosa-gold px-1 py-1">
+                {imageDescription}
               </p>
             </motion.div>
           </div>
