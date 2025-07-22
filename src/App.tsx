@@ -14,6 +14,18 @@ import SickleCell from "@/pages/work/sickleCell";
 import Food from "@/pages/work/food";
 import SkillsTraining from "@/pages/work/skillsTraining";
 import Outreach from "@/pages/work/outreach";
+import Locations from "@/pages/locations";
+import Contact from "@/pages/contact";
+import Media from "@/pages/contact/media";
+import Faq from "@/pages/contact/FAQPage";
+import Support from "@/pages/support";
+import Donation from "@/pages/support/donation";
+import Volunteer from "@/pages/support/volunteer";
+import Partner from "@/pages/support/partner";
+import Advocate from "@/pages/support/advocate";
+import GalleryHighlights from "@/pages/locations/galleryHighlights";
+import Impact from "@/pages/locations/impact";
+import Communities from "./pages/locations/communities";
 
 const App = () => {
   return (
@@ -37,6 +49,22 @@ const App = () => {
           <Route path="/work/food" element={<Food />} />
           <Route path="/work/skills-training" element={<SkillsTraining />} />
           <Route path="/work/outreach" element={<Outreach />} />
+          {/* location */}
+          <Route path="/locations" element={<Locations />} />
+          <Route path="/locations/communities" element={<Communities />} />
+          <Route path="/locations/impact" element={<Impact />} />
+          <Route path="/locations/gallery" element={<GalleryHighlights />} />
+
+          {/* support */}
+          <Route path="/support/" element={<Support />} />
+          <Route path="/support/donate" element={<Donation />} />
+          <Route path="/support/volunteer" element={<Volunteer />} />
+          <Route path="/support/partner" element={<Partner />} />
+          <Route path="/support/advocate" element={<Advocate />} />
+          {/* contact */}
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact/media" element={<Media />} />
+          <Route path="/contact/faq" element={<Faq />} />
         </Route>
       </Routes>
     </Router>

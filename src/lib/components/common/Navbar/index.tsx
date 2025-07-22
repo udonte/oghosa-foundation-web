@@ -67,16 +67,16 @@ const items = [
     page: "/locations",
     subItems: [
       {
-        label: "Our Communities",
+        label: "Communities",
         page: "/locations/communities",
       },
       {
-        label: "Impact Areas",
+        label: "Impact Areas & Stories",
         page: "/locations/impact",
       },
       {
-        label: "Partnerships",
-        page: "/locations/partnerships",
+        label: "Gallery Highlights",
+        page: "/locations/gallery",
       },
     ],
   },

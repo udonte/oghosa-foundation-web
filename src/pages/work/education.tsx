@@ -27,6 +27,11 @@ const Education = () => {
         title="Education Programs"
         subtitle="Breaking cycles of poverty through quality education and learning opportunities"
         image={EducationHero}
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "What We Do", href: "/work" },
+          { label: "Education" },
+        ]}
       />
 
       <EducationMissionSection />

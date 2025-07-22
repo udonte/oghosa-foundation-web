@@ -1,8 +1,23 @@
 import { motion } from "framer-motion";
 import { FiArrowRight, FiGift, FiUsers } from "react-icons/fi";
-import CtaBg from "@/assets/images/food-program1.jpg";
 
-const CTASection = () => {
+interface CTASectionProps {
+  title?: string;
+  subtitle?: string;
+  buttonOneText?: string;
+  buttonOneLink?: string;
+  buttonTwoText?: string;
+  buttonTwoLink?: string;
+}
+
+const CTASection = ({
+  title = "Join Our Movement",
+  subtitle,
+  buttonOneText,
+  buttonOneLink,
+  buttonTwoText,
+  buttonTwoLink,
+}: CTASectionProps) => {
   return (
     <section className=" bg-gray-50 relative px-4 py-16 lg:px-24 lg:py-24 overflow-hidden">
       {/* Floating decorative elements */}
@@ -26,7 +41,7 @@ const CTASection = () => {
             className="mb-8"
           >
             <h2 className="font-montserrat text-4xl md:text-5xl font-bold text-oghosa-green mb-6">
-              Join Our Movement
+              {title}
             </h2>
             <div
               className="w-24 h-1 bg-oghosa-gold mx-auto"
@@ -42,9 +57,7 @@ const CTASection = () => {
             viewport={{ once: true }}
             className="font-dmsans text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed"
           >
-            Every action—whether donating, volunteering, or sharing our
-            mission—helps build a future where compassion creates lasting
-            change.
+            {subtitle}
           </motion.p>
 
           {/* Animated buttons */}
@@ -56,7 +69,7 @@ const CTASection = () => {
             className="flex flex-col sm:flex-row justify-center gap-6"
           >
             <motion.a
-              href="/donate"
+              href={buttonOneLink || "/support/donate#"}
               whileHover={{
                 y: -3,
                 boxShadow: "0 10px 25px -5px rgba(207, 163, 58, 0.3)",
@@ -65,11 +78,11 @@ const CTASection = () => {
               className="flex items-center justify-center bg-oghosa-gold hover:bg-oghosa-gold/90 text-oghosa-green font-montserrat font-bold px-10 py-5 rounded-lg text-lg shadow-lg transition-all"
             >
               <FiGift className="mr-3 text-xl" />
-              Donate Now
+              {buttonOneText || "Donate Now"}
             </motion.a>
 
             <motion.a
-              href="/volunteer"
+              href={buttonTwoLink || "/support/volunteer#"}
               whileHover={{
                 y: -3,
               }}
@@ -77,7 +90,7 @@ const CTASection = () => {
               className="flex items-center justify-center border-2 border-oghosa-gold hover:border-oghosa-green text-oghosa-green font-montserrat font-bold px-10 py-5 rounded-lg text-lg shadow-lg transition-all"
             >
               <FiUsers className="mr-3 text-xl" />
-              Volunteer Today
+              {buttonTwoText || "Volunteer Now"}
             </motion.a>
           </motion.div>
 

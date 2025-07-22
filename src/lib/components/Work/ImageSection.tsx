@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 interface ImageSectionProps {
   imageSrc: string;
-  imageDescription: string;
+  imageDescription?: string;
   className?: string;
   imageClassName?: string;
 }
@@ -18,7 +18,7 @@ const ImageSection = ({ imageSrc, imageDescription }: ImageSectionProps) => {
   };
 
   return (
-    <section className="px-4 py-16 lg:px-24">
+    <section className="px-4 py-8 lg:px-24">
       <div>
         <motion.div
           variants={item}

@@ -130,6 +130,11 @@ const Leadership = () => {
         image={Team}
         title=" Our Leadership"
         subtitle="Guided by experienced professionals committed to Oghosa's vision"
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Where We Work", href: "/locations" },
+          { label: "Impact Areas & Stories" },
+        ]}
       />
 
       {/* Main Content */}

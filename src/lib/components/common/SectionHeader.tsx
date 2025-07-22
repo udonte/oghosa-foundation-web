@@ -3,9 +3,10 @@ import { motion } from "framer-motion";
 type Props = {
   title: string;
   subtitle?: string;
+  icon?: React.ReactNode;
 };
 
-const SectionHeader = ({ title, subtitle }: Props) => {
+const SectionHeader = ({ title, subtitle, icon }: Props) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -14,6 +15,13 @@ const SectionHeader = ({ title, subtitle }: Props) => {
       viewport={{ once: true }}
       className="text-center mb-12"
     >
+      <div className="inline-flex items-center justify-center p-3 rounded-full mb-4">
+        {icon && (
+          <div className="inline-flex items-center justify-center p-3 rounded-full mb-4">
+            {icon}
+          </div>
+        )}
+      </div>
       <h2 className="font-montserrat text-3xl md:text-4xl font-bold text-oghosa-green mb-4">
         {title}
       </h2>

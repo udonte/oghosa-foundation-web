@@ -9,7 +9,6 @@ const FAQSection = ({
   subtitle = "",
   items = [],
   itemClass = "",
-
   defaultOpenId = null,
 }: FAQSectionProps) => {
   const [openId, setOpenId] = useState<string | number | null>(defaultOpenId);
@@ -54,7 +53,7 @@ const FAQSection = ({
                     className={`w-full flex justify-between items-center p-6 text-left cursor-pointer ${
                       openId === item.id
                         ? "bg-oghosa-green/5 text-oghosa-green"
-                        : "bg-white/ text-gray-900 hover:bg-oghosa-green/5 hover:text-oghosa-green"
+                        : "bg-white text-gray-900 hover:bg-oghosa-green/5 hover:text-oghosa-green"
                     }`}
                     aria-expanded={openId === item.id}
                     aria-controls={`faq-answer-${item.id}`}
