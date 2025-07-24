@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import {
   FiArrowRight,
-  FiTarget,
   FiHeart,
   FiUsers,
   FiShield,
@@ -11,38 +10,23 @@ import Team from "@/assets/images/team.jpg";
 import Vision from "@/assets/images/vision.jpg";
 import Mission from "@/assets/images/mission.jpg";
 import boy from "@/assets/images/boy-eating.jpg";
+import SubHeroSection from "@/lib/components/common/SubHeroSection";
 
 const Profile = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-oghosa-green text-white py-24 overflow-hidden">
-        <div className="absolute inset-0  opacity-20 ">
-          <img
-            src={Team}
-            alt="team photo"
-            className="w-full h-full object-cover "
-          />
-        </div>
-        <div className="container mx-auto px-4 relative z-10 text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="font-montserrat text-4xl md:text-5xl font-bold mb-6"
-          >
-            About Oghosa Godson Foundation
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="font-dmsans text-xl md:text-2xl max-w-3xl mx-auto text-oghosa-gold"
-          >
-            Compassion in action. Sustainable impact. Community transformation.
-          </motion.p>
-        </div>
-      </section>
+
+      <SubHeroSection
+        image={Team}
+        title=" Our Profile"
+        subtitle="Get to Know About The Godson Oghosa Foundation"
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Who We Are", href: "/about" },
+          { label: "About Us", href: "/profile" },
+        ]}
+      />
 
       {/* About Us Section */}
       <section className="py-12 px-4 bg-white container max-w-4xl mx-auto">

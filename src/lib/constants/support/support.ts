@@ -11,6 +11,15 @@ import {
   FaSeedling
 } from "react-icons/fa";
 
+
+import { 
+  FaUserInjured,
+  FaUtensils,
+  FaHome,
+  FaUserGraduate,
+  FaChild,
+} from "react-icons/fa";
+
 import OutreachProject1 from "@/assets/images/work/outreach/outreach3.jpg";
 import OutreachProject2 from "@/assets/images/work/outreach/outreach4.jpg";
 import OutreachProject3 from "@/assets/images/work/outreach/outreach5.jpg";
@@ -20,6 +29,133 @@ import OutreachProject6 from "@/assets/images/work/outreach/outreach8.png";
 import { PartnershipTestimonial } from "@/lib/types/support";
 
 
+
+//index
+export const supportFaqData = [
+  {
+    id: 1,
+    question: "How do I update my recurring donation?",
+    answer: "You can manage your recurring donation by logging into your donor portal at donate.oghosa-foundation.org/profile. From there, select 'Recurring Donations' to update the amount, frequency, or payment method. For changes within 24 hours of processing, please email finance@oghosa-foundation.org."
+  },
+  {
+    id: 2,
+    question: "Can I donate supplies instead of money?",
+    answer: "Yes! We accept new/unused supplies at our Lagos and Kano warehouses every Tuesday/Thursday (9AM-3PM). Priority needs include: school uniforms (ages 5-16), non-perishable food with 6+ month shelf life, and unopened medical supplies. Email donations@oghosa-foundation.org for our current needs list."
+  },
+  {
+    id: 3,
+    question: "What percentage goes to overhead?",
+    answer: "For every ₦100 donated: ₦85 funds direct program costs, ₦10 supports operations (staff, facilities), and ₦5 covers administrative costs. We're certified by the Nigerian Charities Commission with full financial transparency—view our latest audit report at oghosa-foundation.org/finances."
+  },
+  {
+    id: 4,
+    question: "How do volunteer selections work?",
+    answer: "Our 3-step process: 1) Application review (2-5 business days), 2) Skills assessment (varies by role), 3) Orientation session. Field roles require background checks. Selection prioritizes: relevant skills (teaching/medical experience for respective programs), availability (minimum 3 months for core roles), and alignment with our values."
+  },
+  {
+    id: 5,
+    question: "How can I get a donation receipt for tax purposes?",
+    answer: "Automated receipts are emailed immediately for online donations. For offline gifts, request via finance@oghosa-foundation.org with your donation details. Nigerian donors can claim up to 25% tax deduction under CIT Section 25—we include all required FIRS documentation with receipts."
+  },
+  {
+    id: 6,
+    question: "What's the process for corporate partnerships?",
+    answer: "Corporate partners follow a 4-week onboarding: 1) Initial proposal review, 2) Impact assessment meeting, 3) MOU drafting, 4) Joint implementation planning. We require two reference checks from previous CSR partners. Email partnerships@oghosa-foundation.org to start the process."
+  },
+  {
+    id: 7,
+    question: "Can I specify which community benefits from my donation?",
+    answer: "Absolutely! When donating, select 'Designated Giving' and choose from our 12 partner communities. We provide quarterly impact reports showing exactly how funds were used in your chosen location. Minimum designation amount is ₦50,000 for tracking purposes."
+  },
+  {
+    id: 8,
+    question: "How often do you update your website with new volunteer opportunities?",
+    answer: "We refresh opportunities every Monday at 9AM WAT. High-demand roles (medical volunteers, grant writers) are filled within 72 hours—we recommend signing up for alerts at oghosa-foundation.org/volunteer-alerts. Seasonal programs (e.g., holiday food drives) are posted 2 months in advance."
+  },
+  {
+    id: 9,
+    question: "What safety measures are in place for field volunteers?",
+    answer: "All field volunteers receive: 1) GPS-tracked communication devices, 2) Security briefings from our partners at Halogen Security, 3) Medical evacuation insurance, and 4) Mandatory buddy system. We've maintained a 100% safety record since 2018 through these protocols."
+  },
+  {
+    id: 10,
+    question: "How transparent are you about fund usage?",
+    answer: "We publish: 1) Monthly expenditure dashboards, 2) Quarterly project completion reports with photos, 3) Annual independent audits. Our 'Follow Your Naira' tool (launching Q1 2024) will let donors track individual transactions. Current transparency rating: 98/100 by Charity Navigator Africa."
+  }
+];
+
+export const supportImpactStats:StatItem[] = [
+  {
+    id: 1,
+    value: 25000,
+    label: "Children Educated",
+    icon: FaGraduationCap,
+    suffix: "+"
+  },
+  {
+    id: 2,
+    value: 1800,
+    label: "Medical Screenings",
+    icon: FaHeartbeat,
+    suffix: "+"
+  },
+  {
+    id: 3,
+    value: 75,
+    label: "Communities Reached",
+    icon: FaMapMarkerAlt,
+    suffix: "+"
+  },
+  {
+    id: 4,
+    value: 850,
+    label: "Patients Supported Annually",
+    icon: FaUserInjured,
+    suffix: "+"
+  },
+  {
+    id: 5,
+    value: 1200000,
+    label: "Meals Provided",
+    icon: FaUtensils,
+    suffix: "+"
+  },
+  {
+    id: 6,
+    value: 320,
+    label: "Homes Built/Renovated",
+    icon: FaHome,
+    suffix: "+"
+  },
+  {
+    id: 7,
+    value: 2400,
+    label: "Vocational Graduates",
+    icon: FaUserGraduate,
+    suffix: "+"
+  },
+  {
+    id: 8,
+    value: 150,
+    label: "Community Volunteers",
+    icon: FaHandsHelping,
+    suffix: "+"
+  },
+  {
+    id: 9,
+    value: 6500,
+    label: "Sickle Cell Tests",
+    icon: FaChild,
+    suffix: "+"
+  },
+  {
+    id: 10,
+    value: 42,
+    label: "Urban Farms Established",
+    icon: FaSeedling,
+    suffix: "+"
+  }
+];
 
 
 export const donationFAQs = [

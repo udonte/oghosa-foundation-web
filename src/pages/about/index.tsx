@@ -6,6 +6,7 @@ import OurStory from "@/assets/images/event-volunteer.jpg";
 import Reports from "@/assets/images/reports.jpg";
 import Esohe from "@/assets/images/esohe.jpg";
 import EventBg from "@/assets/images/vision.jpg";
+import SubHeroSection from "@/lib/components/common/SubHeroSection";
 
 const About = () => {
   const previewSections = [
@@ -60,33 +61,15 @@ const About = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-oghosa-green text-white py-24 overflow-hidden">
-        <div className="absolute inset-0  opacity-20 ">
-          <img
-            src={Team}
-            alt="team photo"
-            className="w-full h-full object-cover "
-          />
-        </div>
-        <div className="container mx-auto px-4 relative z-10 text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="font-montserrat text-4xl md:text-5xl font-bold mb-6"
-          >
-            Who We Are
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="font-dmsans text-xl md:text-2xl max-w-3xl mx-auto text-oghosa-gold"
-          >
-            The Godson Oghosa Foundation
-          </motion.p>
-        </div>
-      </section>
+      <SubHeroSection
+        image={Team}
+        title="  Who We Are"
+        subtitle=" The Godson Oghosa Foundation"
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Who We Are", href: "/about" },
+        ]}
+      />
 
       {/* Preview Sections */}
       <div className="container mx-auto px-4 py-16 lg:px-24 lg:py-24">

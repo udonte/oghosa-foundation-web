@@ -159,3 +159,57 @@ export const faqAllItems = [
       answer: "We welcome media partnerships to share our stories. Contact press@oghosa.org for our media kit and opportunities."
     }
   ];
+
+
+export  const contactfaqData = [
+  {
+    id: 1,
+    question: "How do I volunteer with OGF?",
+    answer: "You can volunteer by completing our online application form at www.oghosa-foundation.org/volunteer. We require a valid ID, two professional references, and a background check for field positions. Volunteer opportunities range from one-day events to 6-month commitments."
+  },
+  {
+    id: 2,
+    question: "What documents are needed for partnerships?",
+    answer: "For organizational partnerships, we require: 1) Certificate of Incorporation, 2) Tax Identification Number, 3) Two-year activity report, and 4) A partnership proposal outlining objectives. Email these to partnerships@oghosa-foundation.org for review."
+  },
+  {
+    id: 3,
+    question: "How are donations distributed?",
+    answer: "Donations are allocated as follows: 80% to direct program costs (food, medicines, school supplies), 15% to operational costs (transport, staff), and 5% to administrative overhead. We publish quarterly financial reports on our website for transparency."
+  },
+  {
+    id: 4,
+    question: "Can I visit your field locations?",
+    answer: "Yes! Field visits can be arranged by emailing visits@oghosa-foundation.org at least 2 weeks in advance. We require a valid ID, completed liability waiver, and adherence to our field safety protocols. Groups larger than 5 need special approval."
+  },
+  {
+    id: 5,
+    question: "How can I track my sponsored child's progress?",
+    answer: "Sponsors receive biannual academic reports, yearly health checkups, and three personal letters annually. You can also schedule video calls through our Lagos office after background verification."
+  },
+  {
+    id: 6,
+    question: "What items can I donate to your food bank?",
+    answer: "We accept: non-perishable foods (rice, beans, canned goods), baby formula, fortified cereals, and cooking oil. All items must have at least 6 months shelf life. Perishable donations can be arranged through our seasonal farm partnerships."
+  },
+  {
+    id: 7,
+    question: "How do you select beneficiaries for your programs?",
+    answer: "Beneficiaries are identified through community leaders, school referrals, and our mobile registration units. Selection criteria include income level, family size, and special needs. All applicants undergo home visits for verification."
+  },
+  {
+    id: 8,
+    question: "Can I specify which program my donation supports?",
+    answer: "Absolutely! When donating online, select from our active programs: Education, Health, Food Security, or Skills Training. For offline donations, include a note with your preferred designation. 100% of earmarked funds go to the specified program."
+  },
+  {
+    id: 9,
+    question: "What safety measures are in place for medical volunteers?",
+    answer: "All medical volunteers receive PPE kits, hepatitis B vaccinations, and emergency evacuation insurance. We maintain a 1:5 staff-to-volunteer ratio in clinical settings and provide 24/7 security at all health facilities."
+  },
+  {
+    id: 10,
+    question: "How can my company organize a team volunteering day?",
+    answer: "Corporate groups can email corporate@oghosa-foundation.org to schedule events. Popular options include: school renovation projects (10-30 people), food packing drives (5-20 people), and health awareness campaigns (requires medical professionals)."
+  }
+];

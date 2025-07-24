@@ -132,8 +132,8 @@ const Leadership = () => {
         subtitle="Guided by experienced professionals committed to Oghosa's vision"
         breadcrumbs={[
           { label: "Home", href: "/" },
-          { label: "Where We Work", href: "/locations" },
-          { label: "Impact Areas & Stories" },
+          { label: "Who We Are", href: "/about" },
+          { label: "Our Leadership", href: "/leadership" },
         ]}
       />
 

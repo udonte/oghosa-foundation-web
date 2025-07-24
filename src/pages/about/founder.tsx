@@ -11,6 +11,7 @@ import moment5 from "@/assets/images/moment5.jpg";
 import moment6 from "@/assets/images/moment6.jpg";
 import Team from "@/assets/images/team.jpg";
 import { BsQuote } from "react-icons/bs";
+import SubHeroSection from "@/lib/components/common/SubHeroSection";
 
 const Founder = () => {
   const timelineEvents = [
@@ -126,33 +127,16 @@ const Founder = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative bg-oghosa-green text-white py-24 overflow-hidden">
-        <div className="absolute inset-0  opacity-20 ">
-          <img
-            src={Team}
-            alt="team photo"
-            className="w-full h-full object-cover "
-          />
-        </div>
-        <div className="container mx-auto px-4 relative z-10 text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="font-montserrat text-4xl md:text-5xl font-bold mb-6"
-          >
-            Oghosa Godson
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="font-dmsans text-xl md:text-2xl max-w-3xl mx-auto text-oghosa-gold"
-          >
-            A legacy of compassion that continues to inspire
-          </motion.p>
-        </div>
-      </section>
+      <SubHeroSection
+        image={Team}
+        title="Our Founder"
+        subtitle=" A legacy of compassion that continues to inspire"
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Who We Are", href: "/about" },
+          { label: "The Founder", href: "/founder" },
+        ]}
+      />
 
       {/* Main Content */}
       <div className="container mx-auto px-4 py-16 max-w-6xl">
@@ -224,7 +208,7 @@ const Founder = () => {
                 <p>
                   Through OGF, we strive to honor his memory by making a lasting
                   impact, ensuring that his vision of a better, more
-                  compassionate world lives on.
+                  compassionate world lives on.
                 </p>
                 <p>
                   This Foundation is not just a tribute, but a call to action -

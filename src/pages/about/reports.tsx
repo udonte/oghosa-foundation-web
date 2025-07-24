@@ -11,6 +11,7 @@ import FinancialChart2 from "@/assets/images/financial-chart2.jpg";
 import Team from "@/assets/images/team.jpg";
 import AnnualReportDoc from "@/assets/docs/annual-report-ogf.pdf";
 import EventBg from "@/assets/images/vision.jpg";
+import SubHeroSection from "@/lib/components/common/SubHeroSection";
 
 const Reports = () => {
   const annualReports = [
@@ -89,41 +90,17 @@ const Reports = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative bg-oghosa-green text-white py-24 overflow-hidden">
-        <div className="absolute inset-0  opacity-20 ">
-          <img
-            src={Team}
-            alt="team photo"
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="container mx-auto px-4 relative z-10 text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="font-montserrat text-4xl md:text-5xl font-bold mb-4"
-          >
-            Annual Reports
-          </motion.h1>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-            className="w-24 h-1 bg-oghosa-gold mx-auto mb-6"
-          ></motion.div>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 0.6 }}
-            className="font-dmsans text-xl md:text-2xl max-w-3xl mx-auto"
-          >
-            Measuring our impact, sharing our results, and maintaining
-            accountability
-          </motion.p>
-        </div>
-      </section>
-
+      <SubHeroSection
+        image={Team}
+        title="Reports"
+        subtitle="Measuring our impact, sharing our results, and maintaining
+            accountability"
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Who We Are", href: "/about" },
+          { label: "Annual Report & Financials", href: "/reports" },
+        ]}
+      />
       {/* Main Content */}
       <div className="container mx-auto px-4 py-16 max-w-6xl">
         {/* Annual Reports */}
