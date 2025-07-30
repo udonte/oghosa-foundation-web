@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { FiArrowRight, FiCalendar, FiMapPin } from "react-icons/fi";
-import { Project, ProjectsSectionProps } from "../../types/work";
+import { FiCalendar, FiMapPin } from "react-icons/fi";
+import { Projects, ProjectsSectionProps } from "../../types/work";
 import SectionHeader from "../common/SectionHeader";
 
 const ProjectsSection = ({
@@ -35,7 +35,7 @@ const ProjectsSection = ({
 };
 
 interface ProjectCardProps {
-  project: Project;
+  project: Projects;
   cardClass: string;
   tagClass: string;
 }

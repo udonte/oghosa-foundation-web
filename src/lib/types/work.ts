@@ -1,6 +1,16 @@
 import { IconType } from 'react-icons';
 import { ReactNode } from "react";
 
+
+
+export interface FAQSectionProps  {
+  title?: string;
+  subtitle?: string;
+  items?: { id: string | number; question: string; answer: string }[];
+  itemClass?: string;
+  defaultOpenId?: string | number | null;
+};
+
 export interface EducationPillar {
     icon: ReactNode;
     title: string;
@@ -83,4 +93,13 @@ export interface Projects {
   imageUrl: string;
   tags: string[];
   status: string;
+}
+
+export interface ProjectsSectionProps {
+  title: string;
+  subtitle: string;
+  projects: Projects[];
+  cardClass?: string;
+  tagClass?: string;
+  containerClass?: string;
 }
