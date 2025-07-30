@@ -1,49 +1,53 @@
-import React, { useState } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import { FiMenu, FiX, FiChevronDown, FiChevronRight } from "react-icons/fi";
-import { motion, AnimatePresence } from "framer-motion";
-import { NavLink } from "react-router-dom";
+import { motion, AnimatePresence, useAnimationControls } from "framer-motion";
+import { NavLink, useLocation } from "react-router-dom";
 import Logo from "@/assets/nav/logo.png";
 import TopHeader from "./TopHeader";
 import { navItems } from "@/lib/constants/common/data";
 
-type NavItem = {
-  label: string;
-  page?: string;
-  subItems?: NavItem[];
-};
+const MOBILE_MENU_ANIMATION_DURATION = 0.3;
 
 const Navbar: React.FC = () => {
+  const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [expandedItems, setExpandedItems] = useState<Record<string, boolean>>(
-    {}
-  );
+  const [expandedItem, setExpandedItem] = useState<string | null>(null);
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
-  // const location = useLocation();
-  // const isActive = (path: string) => {
-  //   return location.pathname === path ? "border-b-2 border-oghosa-gold" : "";
-  // };
-  // const isSubItemActive = (subItems: NavItem[], path: string) => {
-  //   return subItems.some((subItem) => subItem.page === path)
-  //     ? "border-b-2 border-oghosa-gold"
-  //     : "";
-  // };
-  // const isSubItemHovered = (subItems: NavItem[], label: string) => {
-  //   return subItems.some((subItem) => subItem.label === label)
-  //     ? "border-b-2 border-oghosa-gold"
-  //     : "";
-  // };
-  // const isSubItemExpanded = (subItems: NavItem[], label: string) => {
-  //   return subItems.some((subItem) => subItem.label === label)
-  //     ? "border-b-2 border-oghosa-gold"
-  //     : "";
-  // };
+  const mobileMenuControls = useAnimationControls();
 
-  const toggleSubMenu = (label: string) => {
-    setExpandedItems((prev) => ({
-      ...prev,
-      [label]: !prev[label],
-    }));
-  };
+  // Close all menus when route changes
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+    setExpandedItem(null);
+  }, [location.pathname]);
+
+  // Handle mobile menu animation
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      mobileMenuControls.start({
+        opacity: 1,
+        height: "auto",
+        transition: { duration: MOBILE_MENU_ANIMATION_DURATION },
+      });
+    } else {
+      mobileMenuControls.start({
+        opacity: 0,
+        height: 0,
+        transition: { duration: MOBILE_MENU_ANIMATION_DURATION },
+      });
+    }
+  }, [isMobileMenuOpen, mobileMenuControls]);
+
+  const toggleMobileMenu = useCallback(() => {
+    setIsMobileMenuOpen((prev) => !prev);
+    if (isMobileMenuOpen) {
+      setExpandedItem(null);
+    }
+  }, [isMobileMenuOpen]);
+
+  const handleSubMenuToggle = useCallback((label: string) => {
+    setExpandedItem((prev) => (prev === label ? null : label));
+  }, []);
 
   const navItemVariants = {
     hidden: { opacity: 0, y: -10 },
@@ -53,108 +57,104 @@ const Navbar: React.FC = () => {
 
   const subMenuVariants = {
     hidden: { opacity: 0, height: 0 },
-    visible: { opacity: 1, height: "auto" },
-    exit: { opacity: 0, height: 0 },
+    visible: {
+      opacity: 1,
+      height: "auto",
+      transition: {
+        opacity: { duration: 0.2 },
+        height: { duration: 0.3 },
+      },
+    },
+    exit: {
+      opacity: 0,
+      height: 0,
+      transition: {
+        opacity: { duration: 0.15 },
+        height: { duration: 0.25 },
+      },
+    },
+  };
+
+  const mobileSubItemVariants = {
+    hidden: { x: -10, opacity: 0 },
+    visible: { x: 0, opacity: 1 },
+    hover: { backgroundColor: "rgba(207, 163, 58, 0.1)" },
   };
 
   return (
     <header className="fixed top-0 z-50 w-full">
-      {/* Top Header with Donate and Get Involved buttons */}
       <TopHeader />
-      {/* Main Navigation */}
-      <nav className="bg-white py-4 md:py-8  w-full drop-shadow font-montserrat">
+
+      <nav className="bg-white py-4 md:py-8 w-full drop-shadow font-montserrat">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-between h-16">
-            {/* Logo with animation */}
+            {/* Logo */}
             <div className="flex-shrink-0 flex items-center">
               <NavLink to="/">
-                <img
+                <motion.img
                   src={Logo}
-                  alt="oghosa logo"
+                  alt="Oghosa Foundation Logo"
                   className="w-[150px] md:w-[250px]"
+                  whileHover={{ scale: 1.03 }}
+                  transition={{ type: "spring", stiffness: 400 }}
                 />
               </NavLink>
             </div>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-4">
-              {navItems.map((item: NavItem, index) => (
+              {navItems.map((item, index) => (
                 <motion.div
-                  key={index}
+                  key={`desktop-${item.label}-${index}`}
                   className="relative group"
+                  initial="hidden"
+                  animate="visible"
+                  whileHover="hover"
+                  variants={navItemVariants}
+                  transition={{ delay: index * 0.05 }}
                   onHoverStart={() => setHoveredItem(item.label)}
                   onHoverEnd={() => setHoveredItem(null)}
                 >
-                  <motion.div
-                    variants={navItemVariants}
-                    initial="hidden"
-                    animate="visible"
-                    whileHover="hover"
-                  >
-                    {item.subItems ? (
-                      <div
-                        className={`relative ${
-                          hoveredItem === item.label ||
-                          expandedItems[item.label] ||
-                          item.subItems
-                            ? "hover:border-b-2 hover:border-oghosa-gold"
-                            : ""
-                        }`}
-                      >
-                        <NavLink
-                          to={`${item.page}`}
-                          className={`px-1 py-1 text-sm uppercase font-bold flex items-center text-oghosa-green `}
-                          // onClick={() =>
-                          //   item.subItems && toggleSubMenu(item.label)
-                          // }
+                  <div className="relative">
+                    <NavLink
+                      to={item.page || "#"}
+                      className={`px-1 py-1 text-sm uppercase font-bold flex items-center text-oghosa-green ${
+                        hoveredItem === item.label
+                          ? "hover:border-b-2 hover:border-oghosa-gold"
+                          : ""
+                      }`}
+                    >
+                      <span>{item.label}</span>
+                      {item.subItems && (
+                        <motion.span
+                          animate={{
+                            rotate: hoveredItem === item.label ? 180 : 0,
+                          }}
+                          transition={{ duration: 0.2 }}
                         >
-                          <span>{item.label}</span>
-                          {item.subItems && (
-                            <FiChevronDown
-                              className={`ml-1 transition-transform ${
-                                expandedItems[item.label] ||
-                                hoveredItem === item.label
-                                  ? "transform rotate-180"
-                                  : ""
-                              }`}
-                            />
-                          )}
-                        </NavLink>
-                      </div>
-                    ) : (
-                      <NavLink
-                        to={item.page || "#"}
-                        className={`px-1 text-sm py-1 uppercase font-bold flex items-center text-oghosa-green ${
-                          hoveredItem === item.label
-                            ? "hover:border-b-2 hover:border-oghosa-gold"
-                            : ""
-                        } `}
-                      >
-                        {item.label}
-                      </NavLink>
-                    )}
-                  </motion.div>
+                          <FiChevronDown className="ml-1" />
+                        </motion.span>
+                      )}
+                    </NavLink>
+                  </div>
 
                   {item.subItems && (
                     <AnimatePresence>
-                      {(expandedItems[item.label] ||
-                        hoveredItem === item.label) && (
+                      {hoveredItem === item.label && (
                         <motion.div
                           initial="hidden"
                           animate="visible"
                           exit="exit"
                           variants={subMenuVariants}
-                          transition={{ duration: 0.2 }}
-                          className={`absolute left-0 mt-1 border-oghosa-gold/20 border-[1px] min-w-64 rounded-md shadow-lg bg-white z-10 overflow-hidden `}
+                          className="absolute left-0 mt-1 border border-oghosa-gold/20 min-w-64 rounded-md shadow-lg bg-white z-10 overflow-hidden"
                         >
                           {item.subItems.map((subItem, subIndex) => (
                             <NavLink
+                              key={`desktop-sub-${subItem.label}-${subIndex}`}
                               to={subItem.page || "#"}
                               className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-oghosa-gold/20 hover:text-oghosa-green font-medium hover:border-r-4 border-oghosa-gold"
-                              onClick={() => setIsMobileMenuOpen(false)}
                             >
                               <motion.div
-                                key={subIndex}
                                 whileHover={{ x: 5 }}
                                 transition={{ type: "spring", stiffness: 300 }}
                               >
@@ -170,14 +170,16 @@ const Navbar: React.FC = () => {
               ))}
             </div>
 
-            {/* Mobile menu button with animation */}
+            {/* Mobile menu button */}
             <motion.div
               whileTap={{ scale: 0.9 }}
               className="md:hidden flex items-center"
             >
               <button
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                onClick={toggleMobileMenu}
                 className="inline-flex items-center justify-center p-1 rounded-full text-gray-700 hover:text-oghosa-green hover:bg-oghosa-gold/10 focus:outline-none"
+                aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+                aria-expanded={isMobileMenuOpen}
               >
                 {isMobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
               </button>
@@ -185,23 +187,22 @@ const Navbar: React.FC = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation with animations */}
+        {/* Mobile Navigation */}
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
+              animate={mobileMenuControls}
               exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-              className="md:hidden overflow-hidden"
+              className="md:hidden overflow-hidden bg-white"
             >
-              <div className="px-8 pt-2 pb-4 space-y-2 sm:px-3 bg-white mt-4">
+              <div className="px-8 pt-2 pb-4 space-y-2">
                 {navItems.map((item, index) => (
                   <motion.div
-                    key={index}
+                    key={`mobile-${item.label}-${index}`}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1 }}
+                    transition={{ delay: index * 0.05 }}
                   >
                     <div className="flex justify-between items-center">
                       <NavLink
@@ -215,20 +216,25 @@ const Navbar: React.FC = () => {
                       </NavLink>
                       {item.subItems && (
                         <button
-                          onClick={() => toggleSubMenu(item.label)}
+                          onClick={() => handleSubMenuToggle(item.label)}
                           className="p-1 rounded-full hover:text-oghosa-green hover:bg-oghosa-gold/20"
+                          aria-expanded={expandedItem === item.label}
+                          aria-label={`Toggle ${item.label} submenu`}
                         >
-                          {expandedItems[item.label] ? (
-                            <FiChevronDown />
-                          ) : (
+                          <motion.span
+                            animate={{
+                              rotate: expandedItem === item.label ? 90 : 0,
+                            }}
+                          >
                             <FiChevronRight />
-                          )}
+                          </motion.span>
                         </button>
                       )}
                     </div>
+
                     {item.subItems && (
                       <AnimatePresence>
-                        {expandedItems[item.label] && (
+                        {expandedItem === item.label && (
                           <motion.div
                             initial="hidden"
                             animate="visible"
@@ -238,10 +244,9 @@ const Navbar: React.FC = () => {
                           >
                             {item.subItems.map((subItem, subIndex) => (
                               <motion.div
-                                key={subIndex}
-                                whileHover={{
-                                  backgroundColor: "rgba(212, 175, 55, 0.1)",
-                                }}
+                                key={`mobile-sub-${subItem.label}-${subIndex}`}
+                                variants={mobileSubItemVariants}
+                                whileHover="hover"
                                 transition={{ duration: 0.2 }}
                               >
                                 <NavLink
@@ -249,9 +254,7 @@ const Navbar: React.FC = () => {
                                   className="block px-2 py-2 rounded-md text-base font-medium text-gray-600 hover:text-oghosa-green"
                                   onClick={() => setIsMobileMenuOpen(false)}
                                 >
-                                  <div className="flex items-center">
-                                    {subItem.label}
-                                  </div>
+                                  {subItem.label}
                                 </NavLink>
                               </motion.div>
                             ))}

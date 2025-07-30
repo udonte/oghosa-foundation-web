@@ -58,7 +58,7 @@ const SubHeroSection = ({
               size="xl"
               color="custom"
               customColor="text-oghosa-gold"
-              message="Preparing your dashboard..."
+              message="Loading..."
               className="backdrop-blur-sm"
             />
           </div>

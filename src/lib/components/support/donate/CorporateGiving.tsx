@@ -102,12 +102,12 @@ const CorporateGiving = () => {
                 </div>
               </div>
               <div className="bg-gray-50 px-6 py-4 border-t border-gray-200">
-                <a
-                  href="#contact"
+                <Link
+                  to="/contact"
                   className="block text-center font-medium text-oghosa-green hover:text-oghosa-gold transition-colors"
                 >
                   Learn More →
-                </a>
+                </Link>
               </div>
             </motion.div>
           ))}

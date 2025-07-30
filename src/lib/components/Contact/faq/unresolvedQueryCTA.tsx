@@ -1,6 +1,7 @@
 import { FaEnvelope, FaComments, FaPhoneAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 import SectionHeader from "../../common/SectionHeader";
+import { Link } from "react-router";
 
 const UnresolvedQueryCTA = () => {
   return (
@@ -87,12 +88,12 @@ const UnresolvedQueryCTA = () => {
             <p className="font-dm-sans text-gray-600 mb-4">
               Prefer to visit us in person?
             </p>
-            <a
-              href="/contact#locations"
+            <Link
+              to="/contact#"
               className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-oghosa-green hover:bg-oghosa-green/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-oghosa-gold transition-all"
             >
               View office locations
-            </a>
+            </Link>
           </div>
         </div>
       </div>

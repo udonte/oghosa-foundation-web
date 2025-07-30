@@ -7,6 +7,7 @@ import {
   FaLanguage,
 } from "react-icons/fa";
 import SectionHeader from "../../common/SectionHeader";
+import { Link } from "react-router";
 
 export const VolunteerSpotlight = () => {
   const volunteerSkills = [
@@ -142,12 +143,12 @@ export const VolunteerSpotlight = () => {
               whileTap={{ scale: 0.98 }}
               className="mt-8 text-center"
             >
-              <a
-                href="/volunteer/apply"
+              <Link
+                to="/volunteer/apply"
                 className="inline-block bg-oghosa-green text-white px-8 py-3 rounded-full font-medium hover:bg-oghosa-gold transition-colors"
               >
                 Apply Your Skills
-              </a>
+              </Link>
             </motion.div>
           </motion.div>
         </div>

@@ -162,18 +162,21 @@ const Leadership = () => {
                     <div className="flex gap-3">
                       <a
                         href={member.social.linkedin}
+                        target="_blank"
                         className="text-gray-400 hover:text-oghosa-green transition-colors"
                       >
                         <FiLinkedin className="text-xl" />
                       </a>
                       <a
                         href={member.social.twitter}
+                        target="_blank"
                         className="text-gray-400 hover:text-oghosa-green transition-colors"
                       >
                         <FiTwitter className="text-xl" />
                       </a>
                       <a
                         href={`mailto:${member.social.email}`}
+                        target="_blank"
                         className="text-gray-400 hover:text-oghosa-green transition-colors"
                       >
                         <FiMail className="text-xl" />

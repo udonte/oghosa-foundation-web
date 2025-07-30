@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { FiArrowRight } from "react-icons/fi";
 import Esohe from "@/assets/images/esohe.jpg";
+import { Link } from "react-router";
 
 const FounderSection = () => {
   return (
@@ -86,13 +87,13 @@ const FounderSection = () => {
               viewport={{ once: true }}
               className=" mt-16"
             >
-              <a
-                href="/about/founder"
+              <Link
+                to="/about/founder"
                 className="inline-flex items-center bg-oghosa-green hover:bg-oghosa-gold text-white font-montserrat font-bold py-4 px-10 rounded-lg transition-all duration-300 group shadow-lg hover:shadow-xl"
               >
                 Continue Oghosa's Legacy
                 <FiArrowRight className="ml-3 group-hover:translate-x-2 transition-transform text-xl" />
-              </a>
+              </Link>
             </motion.div>
           </motion.div>
         </motion.div>

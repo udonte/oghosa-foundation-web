@@ -9,6 +9,7 @@ import MavinLogo from "@/assets/images/partners/mavin.jpeg";
 import SamsungLogo from "@/assets/images/partners/samsung.png";
 import SpotifyLogo from "@/assets/images/partners/spotify.png";
 import UsaidLogo from "@/assets/images/partners/usaid.png";
+import { Link } from "react-router";
 
 export const DonorRecognition = () => {
   const partners = [
@@ -158,12 +159,12 @@ export const DonorRecognition = () => {
           <p className="text-gray-600 mb-4">
             Join our community of changemakers
           </p>
-          <a
-            href="/donate"
+          <Link
+            to="/donate"
             className="inline-block bg-oghosa-green text-white px-8 py-3 rounded-full font-medium hover:bg-oghosa-gold transition-colors"
           >
             Become a Supporter
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>

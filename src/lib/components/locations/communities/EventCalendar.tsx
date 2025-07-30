@@ -8,6 +8,7 @@ import {
 } from "react-icons/fa";
 import { useState } from "react";
 import SectionHeader from "../../common/SectionHeader";
+import { Link } from "react-router";
 
 // Animation variants
 const containerVariants = {
@@ -159,12 +160,12 @@ export const EventCalendar = () => {
                           {event.requirements}
                         </div>
                       )}
-                      <a
-                        href={event.ctaLink}
+                      <Link
+                        to={event.ctaLink}
                         className="inline-block bg-oghosa-gold text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-oghosa-green transition-colors"
                       >
                         {event.cta}
-                      </a>
+                      </Link>
                     </motion.div>
                   )}
                 </AnimatePresence>

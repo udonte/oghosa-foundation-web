@@ -78,24 +78,28 @@ const ContactChannelsGrid = () => {
               <a
                 href="#"
                 className="text-gray-600 hover:text-[#1DA1F2] transition-colors"
+                target="_blank"
               >
                 <FaTwitter className="text-xl" />
               </a>
               <a
                 href="#"
                 className="text-gray-600 hover:text-[#E1306C] transition-colors"
+                target="_blank"
               >
                 <FaInstagram className="text-xl" />
               </a>
               <a
                 href="#"
                 className="text-gray-600 hover:text-[#4267B2] transition-colors"
+                target="_blank"
               >
                 <FaFacebookF className="text-xl" />
               </a>
               <a
                 href="#"
                 className="text-gray-600 hover:text-[#0077B5] transition-colors"
+                target="_blank"
               >
                 <FaLinkedinIn className="text-xl" />
               </a>

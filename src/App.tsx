@@ -26,10 +26,12 @@ import Advocate from "@/pages/support/advocate";
 import GalleryHighlights from "@/pages/locations/galleryHighlights";
 import Impact from "@/pages/locations/impact";
 import Communities from "./pages/locations/communities";
+import { ScrollToTop } from "./lib/components/common/ScrollToTop";
 
 const App = () => {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         {/* main pages */}
         <Route path="/" element={<CoreLayout />}>

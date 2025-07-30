@@ -14,6 +14,7 @@ import Client11 from "@/assets/images/partners/samsung.png";
 import Client12 from "@/assets/images/partners/spotify.png";
 import Client13 from "@/assets/images/partners/usaid.png";
 import SectionHeader from "../../common/SectionHeader";
+import { Link } from "react-router";
 
 const partners = [
   {
@@ -106,12 +107,12 @@ const PartnersDisplay = () => {
           transition={{ delay: 0.3 }}
           className="text-center mt-16"
         >
-          <a
-            href="#become-partner"
+          <Link
+            to="/contact"
             className="inline-block border-2 border-oghosa-green text-oghosa-green hover:bg-oghosa-green hover:text-white font-montserrat font-bold py-3 px-8 rounded-md transition-colors"
           >
             Join Our Partner Network
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>

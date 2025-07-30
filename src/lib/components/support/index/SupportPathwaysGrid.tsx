@@ -7,6 +7,7 @@ import {
   FaArrowRight,
 } from "react-icons/fa";
 import SectionHeader from "../../common/SectionHeader";
+import { Link } from "react-router";
 
 const SupportPathwaysGrid = () => {
   const pathways = [
@@ -137,13 +138,13 @@ const SupportPathwaysGrid = () => {
                   </ul>
                 </div>
                 <div className="mt-auto">
-                  <a
-                    href={pathway.cta.link}
+                  <Link
+                    to={pathway.cta.link}
                     className={`inline-flex items-center font-medium text-oghosa-green hover:text-oghosa-gold transition-colors`}
                   >
                     {pathway.cta.text}
                     <FaArrowRight className="ml-2" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </motion.div>

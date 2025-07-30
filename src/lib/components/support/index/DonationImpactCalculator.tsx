@@ -13,6 +13,7 @@ import {
   FaHome,
 } from "react-icons/fa";
 import SectionHeader from "../../common/SectionHeader";
+import { Link } from "react-router";
 
 interface Impact {
   amount: number;
@@ -305,12 +306,12 @@ const DonationImpactCalculator = () => {
               transition={{ delay: 0.2 }}
               className="mt-8 text-center"
             >
-              <a
-                href={`/donate?amount=${donationAmount}`}
+              <Link
+                to={`support/donate`}
                 className="inline-block bg-oghosa-green hover:bg-oghosa-gold text-white font-medium px-8 py-3 rounded-full transition-colors"
               >
                 Donate ₦{donationAmount.toLocaleString()}
-              </a>
+              </Link>
               <p className="text-sm text-gray-500 mt-2">
                 Secure payment processing via Flutterwave
               </p>

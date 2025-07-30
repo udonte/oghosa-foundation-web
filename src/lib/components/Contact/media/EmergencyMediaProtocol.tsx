@@ -1,6 +1,7 @@
 import { FaPhoneAlt, FaLock, FaExclamationTriangle } from "react-icons/fa";
 import { motion } from "framer-motion";
 import SectionHeader from "../../common/SectionHeader";
+import { Link } from "react-router";
 
 const EmergencyMediaProtocol = () => {
   return (
@@ -81,13 +82,13 @@ const EmergencyMediaProtocol = () => {
                   <p className="font-dm-sans font-medium text-gray-900">
                     Review our crisis response policies:
                   </p>
-                  <a
-                    href="/legal/media-policy"
+                  <Link
+                    to="/legal/media-policy"
                     className="inline-flex items-center font-dm-sans text-oghosa-green hover:text-oghosa-gold mt-1 transition-colors"
                   >
                     <FaExclamationTriangle className="mr-2" />
                     Crisis Response FAQ
-                  </a>
+                  </Link>
                 </div>
               </li>
             </ol>

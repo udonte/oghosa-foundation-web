@@ -9,6 +9,7 @@ import SectionHeader from "../../common/SectionHeader";
 import punchlogo from "@/assets/images/contact/media/punch.png";
 import channels from "@/assets/images/contact/media/channels.png";
 import guardian from "@/assets/images/contact/media/guardian.png";
+import { Link } from "react-router";
 
 interface MediaItem {
   id: number;
@@ -228,12 +229,12 @@ const MediaSpotlight = () => {
         </div>
 
         <div className="mt-10 text-center">
-          <a
-            href="/press-coverage"
+          <Link
+            to="/press-coverage"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-oghosa-green hover:bg-oghosa-green/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-oghosa-gold transition-all"
           >
             View All Media Coverage
-          </a>
+          </Link>
         </div>
       </div>
     </section>

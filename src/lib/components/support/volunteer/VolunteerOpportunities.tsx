@@ -13,6 +13,7 @@ import {
   FiCloud,
 } from "react-icons/fi";
 import SectionHeader from "../../common/SectionHeader";
+import { Link } from "react-router";
 
 const opportunities = [
   {
@@ -123,12 +124,12 @@ const VolunteerOpportunities = () => {
           transition={{ delay: 0.3 }}
           className="text-center mt-16"
         >
-          <a
-            href="#register"
+          <Link
+            to="/support/volunteer"
             className="inline-block border-2 border-oghosa-green text-oghosa-green hover:bg-oghosa-green hover:text-white font-montserrat font-bold py-3 px-8 rounded-md transition-colors"
           >
             Join Our Volunteer Team
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>

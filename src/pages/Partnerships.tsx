@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { FiExternalLink } from "react-icons/fi";
+import { Link } from "react-router";
 
 const PartnerShowcase = () => {
   const partners = [
@@ -126,13 +127,13 @@ const PartnerShowcase = () => {
           <p className="font-dmsans text-gray-600 mb-6">
             Want to join our network of change-makers?
           </p>
-          <a
-            href="/partners"
+          <Link
+            to="/contact"
             className="inline-flex items-center bg-oghosa-green hover:bg-oghosa-gold text-white font-montserrat font-semibold py-3 px-8 rounded-lg transition-colors duration-300 group"
           >
             Become a Partner
             <FiExternalLink className="ml-2 group-hover:translate-x-1 transition-transform" />
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>

@@ -8,6 +8,7 @@ import SickleCellImg from "@/assets/images/sickle-cell-program1.jpg";
 import FoodSecurityImg from "@/assets/images/food-program1.jpg";
 import SkillsImg from "@/assets/images/skills-program1.jpg";
 import CharityImg from "@/assets/images/charity-program1.jpg"; //
+import { Link } from "react-router";
 
 const ProgramsSection = () => {
   const programs = [
@@ -144,13 +145,13 @@ const ProgramsSection = () => {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <a
-            href="/work"
+          <Link
+            to="/work"
             className="inline-flex items-center bg-oghosa-green hover:bg-oghosa-gold text-white font-montserrat font-bold py-4 px-10 rounded-lg transition-all duration-300 group shadow-lg hover:shadow-xl"
           >
             Explore All Initiatives
             <FiArrowRight className="ml-3 group-hover:translate-x-2 transition-transform text-xl" />
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>

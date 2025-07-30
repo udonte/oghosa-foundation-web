@@ -50,6 +50,7 @@ const PartnershipMissionSection = () => {
             <div className="mt-8">
               <a
                 href="/partnership-prospectus"
+                download
                 className="inline-flex items-center text-oghosa-green font-montserrat font-bold hover:text-oghosa-gold transition-colors"
               >
                 Download Partnership Prospectus

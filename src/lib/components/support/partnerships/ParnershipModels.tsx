@@ -9,6 +9,7 @@ import {
   FiBook,
 } from "react-icons/fi";
 import SectionHeader from "../../common/SectionHeader";
+import { Link } from "react-router";
 
 const models = [
   {
@@ -183,12 +184,12 @@ const PartnershipModels = () => {
           transition={{ delay: 0.3 }}
           className="text-center mt-16"
         >
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             className="inline-block border-2 border-oghosa-green text-oghosa-green hover:bg-oghosa-green hover:text-white font-montserrat font-bold py-3 px-8 rounded-md transition-colors"
           >
             Customize Your Partnership
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>

@@ -1,6 +1,6 @@
 // components/Breadcrumbs.tsx
 import { IoMdArrowDropright } from "react-icons/io";
-import { Link } from "react-router-dom"; // or use <a> tags if not using React Router
+import { Link } from "react-router-dom";
 
 type BreadcrumbItem = {
   label: string;

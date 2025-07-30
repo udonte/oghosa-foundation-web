@@ -9,6 +9,7 @@ import {
   FiTrendingUp,
 } from "react-icons/fi";
 import SectionHeader from "../../common/SectionHeader";
+import { Link } from "react-router";
 
 const benefits = [
   {
@@ -81,12 +82,12 @@ const PartnerBenefits = () => {
           transition={{ delay: 0.3 }}
           className="text-center mt-16"
         >
-          <a
-            href="#partner-form"
+          <Link
+            to="/contact"
             className="inline-block bg-oghosa-green hover:bg-oghosa-green/90 text-white font-montserrat font-bold py-3 px-8 rounded-md transition-colors"
           >
             Start Your Partnership Journey
-          </a>
+          </Link>
           <p className="font-dmsans text-gray-600 mt-4">
             or contact us directly at{" "}
             <a

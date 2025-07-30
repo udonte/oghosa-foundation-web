@@ -11,8 +11,8 @@ const TopHeader = () => {
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="max-w-7xl mx-auto flex justify-end items-center space-x-4">
-          <Link to={"#"}>
+        <div className="max-w-7xl mx-auto flex justify-center md:justify-end items-center space-x-4">
+          <Link to={"/support/donate"}>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -21,7 +21,7 @@ const TopHeader = () => {
               Donate Now
             </motion.button>
           </Link>
-          <Link to={"#"}>
+          <Link to={"/support"}>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

@@ -14,6 +14,7 @@ import Client10 from "@/assets/images/partners/mavin.jpeg";
 import Client11 from "@/assets/images/partners/samsung.png";
 import Client12 from "@/assets/images/partners/spotify.png";
 import Client13 from "@/assets/images/partners/usaid.png";
+import { Link } from "react-router";
 
 const PartnerShowcase = () => {
   const partners = [
@@ -127,13 +128,13 @@ const PartnerShowcase = () => {
           <p className="font-dmsans text-gray-600 mb-6">
             Want to join our network of change-makers?
           </p>
-          <a
-            href="/support/partner"
+          <Link
+            to="/support/partner"
             className="inline-flex items-center bg-oghosa-green hover:bg-oghosa-gold text-white font-montserrat font-semibold py-3 px-8 rounded-lg transition-colors duration-300 group"
           >
             Become a Partner
             <FiExternalLink className="ml-2 group-hover:translate-x-1 transition-transform" />
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>
