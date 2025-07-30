@@ -8,6 +8,7 @@ import {
 import { motion } from "framer-motion";
 import SectionHeader from "../../common/SectionHeader";
 import PartnerShowcase from "../../Home/PartnerShowcase";
+import { Link } from "react-router";
 
 const CorporateGiving = () => {
   const fadeIn = {
@@ -134,19 +135,19 @@ const CorporateGiving = () => {
               that aligns with your business goals and social impact objectives.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a
-                href="/contact?type=corporate"
+              <Link
+                to="/contact"
                 className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-oghosa-green bg-white hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
               >
                 Request Partnership Info
-              </a>
-              <a
-                href="tel:+2349087654321"
+              </Link>
+              <Link
+                to="tel:+2349087654321"
                 className="inline-flex items-center justify-center px-6 py-3 border border-white text-base font-medium rounded-md shadow-sm text-white bg-transparent hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
               >
                 <FaHandshake className="mr-2" />
                 Speak to Our Team
-              </a>
+              </Link>
             </div>
           </div>
         </motion.div>

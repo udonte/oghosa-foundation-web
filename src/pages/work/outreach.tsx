@@ -24,6 +24,11 @@ const Outreach = () => {
         title=" Outreach Programs"
         subtitle="Empowering communities through compassionate outreach and support"
         image={OutreachHero}
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Where We Do", href: "/work" },
+          { label: "Outreach & Charity" },
+        ]}
       />
       <OutreachMissionSection />
       <ImageSection

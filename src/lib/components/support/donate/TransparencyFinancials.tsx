@@ -6,6 +6,7 @@ import {
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 import SectionHeader from "../../common/SectionHeader";
+import { Link } from "react-router";
 
 const TransparencyFinancials = () => {
   // Financial allocation data
@@ -218,12 +219,12 @@ const TransparencyFinancials = () => {
         </div>
 
         <div className="mt-12 text-center">
-          <a
-            href="/financials"
+          <Link
+            to="/about/reports"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-oghosa-green hover:bg-oghosa-green/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-oghosa-gold transition-all"
           >
             Explore Full Financial Details
-          </a>
+          </Link>
         </div>
       </div>
     </section>

@@ -21,7 +21,7 @@ const ThreePanelNavigation = () => {
       icon: <FaHandshake className="w-6 h-6" />,
       title: "Partnerships",
       description: "How we collaborate locally",
-      href: "/locations/partnerships",
+      href: "/support/partner",
     },
   ];
 

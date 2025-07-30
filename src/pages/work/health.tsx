@@ -24,6 +24,11 @@ const Health = () => {
         title="Health Initiatives"
         subtitle="Empowering communities through accessible healthcare and wellness programs"
         image={HealthHero}
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Where We Do", href: "/work" },
+          { label: "Health" },
+        ]}
       />
       <HealthMissionSection />
       <ImageSection

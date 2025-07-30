@@ -14,9 +14,8 @@ import SubHeroSection from "@/lib/components/common/SubHeroSection";
 
 const Profile = () => {
   return (
-    <div className="min-h-screen">
+    <main className="">
       {/* Hero Section */}
-
       <SubHeroSection
         image={Team}
         title=" Our Profile"
@@ -313,7 +312,7 @@ const Profile = () => {
           </motion.p>
           <div className="flex flex-wrap justify-center gap-4">
             <motion.a
-              href="/get-involved"
+              href="/support/volunteer#hero"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-oghosa-green hover:bg-oghosa-green/90 text-white font-montserrat font-bold px-8 py-4 rounded-lg transition-all shadow-md hover:shadow-lg"
@@ -321,7 +320,7 @@ const Profile = () => {
               Get Involved
             </motion.a>
             <motion.a
-              href="/contact"
+              href="/contact#hero"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="border-2 border-oghosa-green text-oghosa-green hover:bg-white font-montserrat font-bold px-8 py-4 rounded-lg transition-all shadow-md hover:shadow-lg"
@@ -331,7 +330,7 @@ const Profile = () => {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 };
 

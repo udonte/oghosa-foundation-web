@@ -245,12 +245,12 @@ export const EventCalendar = () => {
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
         >
-          <a
-            href="/events"
-            className="inline-flex items-center bg-white text-oghosa-green px-6 py-3 rounded-full font-medium shadow-sm hover:shadow-md transition-all border border-oghosa-green/20"
+          <button
+            disabled
+            className="inline-flex items-center bg-white text-oghosa-green px-6 py-3 rounded-full font-medium shadow-sm hover:shadow-md transition-all border border-oghosa-green/20 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             View full calendar <FaChevronRight className="ml-2" />
-          </a>
+          </button>
         </motion.div>
       </div>
     </motion.div>

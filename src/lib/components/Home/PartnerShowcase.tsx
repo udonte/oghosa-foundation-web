@@ -128,7 +128,7 @@ const PartnerShowcase = () => {
             Want to join our network of change-makers?
           </p>
           <a
-            href="/partners"
+            href="/support/partner"
             className="inline-flex items-center bg-oghosa-green hover:bg-oghosa-gold text-white font-montserrat font-semibold py-3 px-8 rounded-lg transition-colors duration-300 group"
           >
             Become a Partner

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FiPlay, FiHeart, FiShare2, FiArrowRight } from "react-icons/fi";
+import { FiArrowRight } from "react-icons/fi";
 
 const VideoTestimonials = () => {
   const testimonials = [
@@ -103,7 +103,10 @@ const VideoTestimonials = () => {
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <button className="inline-flex items-center bg-oghosa-green hover:bg-oghosa-gold text-white font-montserrat font-semibold py-3 px-8 rounded-full transition-all duration-300 group shadow-md hover:shadow-lg">
+          <button
+            className="inline-flex items-center bg-oghosa-green hover:bg-oghosa-gold text-white font-montserrat font-semibold py-3 px-8 rounded-full transition-all duration-300 group shadow-md hover:shadow-lg cursor-pointer"
+            onClick={() => (window.location.href = "/locations/impact")}
+          >
             View More Stories
             <FiArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
           </button>

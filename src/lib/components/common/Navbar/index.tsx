@@ -4,119 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import Logo from "@/assets/nav/logo.png";
 import TopHeader from "./TopHeader";
-
-const items = [
-  {
-    label: "Who we are",
-    page: "/about",
-    subItems: [
-      {
-        label: "About Us",
-        page: "/about/profile",
-      },
-      {
-        label: "The Founder - Oghosa Godson",
-        page: "/about/founder",
-      },
-      {
-        label: "Our Leadership",
-        page: "/about/leadership",
-      },
-      {
-        label: "Annual Reports / Financials",
-        page: "/about/reports",
-      },
-    ],
-  },
-  {
-    label: "What we do",
-    page: "/work",
-    subItems: [
-      {
-        label: "Programs & Initiatives",
-        page: "/work/programs",
-      },
-      {
-        label: "Education Programs",
-        page: "/work/education",
-      },
-      {
-        label: "Health Initiatives",
-        page: "/work/health",
-      },
-      {
-        label: "Sickle Cell Support",
-        page: "/work/sickle-cell",
-      },
-      {
-        label: "Food Security",
-        page: "/work/food",
-      },
-      {
-        label: "Skills Training",
-        page: "/work/skills-training",
-      },
-      {
-        label: "Charitable Outreach",
-        page: "/work/outreach",
-      },
-    ],
-  },
-  {
-    label: "Where We Work",
-    page: "/locations",
-    subItems: [
-      {
-        label: "Communities",
-        page: "/locations/communities",
-      },
-      {
-        label: "Impact Areas & Stories",
-        page: "/locations/impact",
-      },
-      {
-        label: "Gallery Highlights",
-        page: "/locations/gallery",
-      },
-    ],
-  },
-  {
-    label: "Support us",
-    page: "/support",
-    subItems: [
-      {
-        label: "Donate",
-        page: "/support/donate",
-      },
-      {
-        label: "Volunteer",
-        page: "/support/volunteer",
-      },
-      {
-        label: "Partner With Us",
-        page: "/support/partner",
-      },
-      {
-        label: "Advocate",
-        page: "/support/advocate",
-      },
-    ],
-  },
-  {
-    label: "Contact",
-    page: "/contact",
-    subItems: [
-      {
-        label: "FAQ",
-        page: "/contact/faq",
-      },
-      {
-        label: "Media Inquiries",
-        page: "/contact/media",
-      },
-    ],
-  },
-];
+import { navItems } from "@/lib/constants/common/data";
 
 type NavItem = {
   label: string;
@@ -190,7 +78,7 @@ const Navbar: React.FC = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-4">
-              {items.map((item: NavItem, index) => (
+              {navItems.map((item: NavItem, index) => (
                 <motion.div
                   key={index}
                   className="relative group"
@@ -308,7 +196,7 @@ const Navbar: React.FC = () => {
               className="md:hidden overflow-hidden"
             >
               <div className="px-8 pt-2 pb-4 space-y-2 sm:px-3 bg-white mt-4">
-                {items.map((item, index) => (
+                {navItems.map((item, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, x: -20 }}

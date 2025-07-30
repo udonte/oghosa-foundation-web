@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { FiBook, FiUsers, FiTrendingUp, FiVolume2 } from "react-icons/fi";
 import SectionHeader from "../../common/SectionHeader";
+import { Link } from "react-router";
 
 const AdvocacyReasonsSection = () => {
   const advocacyReasons = [
@@ -62,12 +63,12 @@ const AdvocacyReasonsSection = () => {
           transition={{ delay: 0.3 }}
           className="text-center mt-16"
         >
-          <a
-            href="#learn-more"
+          <Link
+            to="#contact"
             className="inline-block border-2 border-oghosa-green text-oghosa-green hover:bg-oghosa-green hover:text-white font-montserrat font-bold py-3 px-8 rounded-md transition-colors"
           >
             Learn About Our Advocacy Wins
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>

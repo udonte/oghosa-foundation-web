@@ -24,6 +24,11 @@ const SickleCell = () => {
         title="Sickle Cell Support"
         subtitle="Care, education, and community for those affected by sickle cell disease"
         image={SickelCellHero}
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Where We Do", href: "/work" },
+          { label: "Sickle Cell" },
+        ]}
       />
       <SickleMissionSection />
       <ImageSection

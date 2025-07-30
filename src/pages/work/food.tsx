@@ -25,6 +25,11 @@ const Food = () => {
         title="Food Security"
         subtitle="Empowering communities through sustainable food initiatives"
         image={Food1}
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Where We Do", href: "/work" },
+          { label: "Food Security" },
+        ]}
       />
       <FoodMissionSection />
       <ImageSection

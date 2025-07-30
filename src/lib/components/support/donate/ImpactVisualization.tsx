@@ -7,6 +7,7 @@ import {
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 import SectionHeader from "../../common/SectionHeader";
+import { Link } from "react-router";
 
 const ImpactVisualization = () => {
   const impactItems = [
@@ -91,12 +92,12 @@ const ImpactVisualization = () => {
           <p className="font-dm-sans text-gray-600 mb-6">
             *Based on actual program costs from our 2023 Annual Report
           </p>
-          <a
-            href="/financials"
+          <Link
+            to="/about/reports"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-oghosa-green hover:bg-oghosa-green/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-oghosa-gold transition-all"
           >
             View Detailed Financials
-          </a>
+          </Link>
         </div>
       </div>
     </section>

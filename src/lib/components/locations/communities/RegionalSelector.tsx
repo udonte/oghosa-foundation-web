@@ -2,6 +2,7 @@ import { regions } from "@/lib/constants/locations/communities";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import SectionHeader from "../../common/SectionHeader";
+import { Link } from "react-router";
 
 export const RegionSelector = () => {
   const [activeRegion, setActiveRegion] = useState(0);
@@ -83,13 +84,15 @@ export const RegionSelector = () => {
               </motion.p>
             </AnimatePresence>
 
-            <motion.button
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="w-full sm:w-auto bg-oghosa-gold text-white px-6 py-2 sm:px-8 sm:py-3 rounded-full text-sm sm:text-base font-medium hover:bg-oghosa-green transition-colors"
-            >
-              Learn About {regions[activeRegion].name} Programs
-            </motion.button>
+            <Link to={"/support/donate#"}>
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="w-full sm:w-auto bg-oghosa-gold cursor-pointer text-white px-6 py-2 sm:px-8 sm:py-3 rounded-full text-sm sm:text-base font-medium hover:bg-oghosa-green transition-colors"
+              >
+                Donate to {regions[activeRegion].name} Programs
+              </motion.button>
+            </Link>
           </div>
 
           {/* Image Side - Mobile: Full width, Desktop: Fixed height */}

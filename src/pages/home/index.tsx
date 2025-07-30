@@ -19,7 +19,7 @@ const Home = () => {
       subtitle:
         "Providing scholarships and learning resources to underserved communities",
       ctaText: "Support a Child",
-      ctaLink: "/donate",
+      ctaLink: "/support/donate#",
     },
     {
       id: 2,
@@ -28,7 +28,7 @@ const Home = () => {
       subtitle:
         "Awareness campaigns and free medical support for affected families",
       ctaText: "Join Our Cause",
-      ctaLink: "/volunteer",
+      ctaLink: "support/volunteer#",
     },
     {
       id: 3,
@@ -36,7 +36,7 @@ const Home = () => {
       title: "Ensuring Food Security",
       subtitle: "Sustainable agriculture programs to combat hunger",
       ctaText: "Donate Now",
-      ctaLink: "/food-drive",
+      ctaLink: "/work/food-security#",
     },
   ];
 

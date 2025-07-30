@@ -25,6 +25,11 @@ const SkillsTraining = () => {
         title="Skills Training"
         subtitle="Empowering communities through vocational skills and entrepreneurship"
         image={skills3}
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Where We Do", href: "/work" },
+          { label: "Skills Training" },
+        ]}
       />
       <SkillsMissionSection />
       <ImageSection

@@ -7,25 +7,27 @@ import {
   FiAward,
   FiArrowRight,
 } from "react-icons/fi";
-import ExecutiveDirector from "@/assets/images/lead1.jpg";
-import ProgramDirector from "@/assets/images/lead3.jpg";
-import BoardChair from "@/assets/images/esohe.jpg";
+import ExecutiveDirector from "@/assets/images/profile/esohe.jpg";
+import ProgramDirector from "@/assets/images/profile/George.jpg";
 import Team from "@/assets/images/team.jpg";
 import SubHeroSection from "@/lib/components/common/SubHeroSection";
+import SectionHeader from "@/lib/components/common/SectionHeader";
+import Samuel from "@/assets/images/profile/samuel.jpg";
+import David from "@/assets/images/profile/david.jpg";
 
 const Leadership = () => {
   const executiveTeam = [
     {
-      name: "Dr. Ada Ngozi",
+      name: "Esohe Oriakhi",
       role: "Executive Director",
-      bio: "Public health specialist with 15+ years experience in nonprofit management. Oversees strategic direction and organizational growth.",
+      bio: "Legal and Compliances Expert leveraging her 11+ years of pan-African fintech regulatory expertise to build legally sound, scalable social impact programs. Leads our mission to empower communities through innovative, compliant solutions. Visionary leader with a passion for social justice and community empowerment. She has a proven track record of building successful programs that create lasting impact.",
       image: ExecutiveDirector,
       social: {
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/esohe-o-4565a6105/",
         twitter: "#",
-        email: "ada@oghosa-foundation.org",
+        email: "eseohe.oriakhi@gmail.com",
       },
-      tenure: "Since 2018",
+      tenure: "Since 2024",
       achievements: [
         "Expanded programs to 5 new states",
         "Secured $2M+ in grants",
@@ -33,16 +35,16 @@ const Leadership = () => {
       ],
     },
     {
-      name: "Chike Okonkwo",
+      name: "George Udonte",
       role: "Program Director",
-      bio: "Education advocate who developed our vocational training curriculum. Manages all field operations and program implementation.",
+      bio: "Tech Education Advocate blending technical expertise with a heart for community impact. Proven track record in developing scalable solutions and mentoring young innovators. Leads OGF's initiatives with a user-first approach that transforms lives through technology and education. Manages all field operations and program implementation.",
       image: ProgramDirector,
       social: {
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/george-udonte",
         twitter: "#",
-        email: "chike@oghosa-foundation.org",
+        email: "georgeudonte@gmail.com",
       },
-      tenure: "Since 2016",
+      tenure: "Since 2024",
       achievements: [
         "Designed 12 skills training programs",
         "Trained 200+ local facilitators",
@@ -53,49 +55,25 @@ const Leadership = () => {
 
   const boardMembers = [
     {
-      name: "Dr. Esohe Oriakhi",
+      name: "Esohe Oriakhi",
       role: "Board Chair",
-      bio: "Professor of Social Work with expertise in community development and nonprofit governance.",
-      image: BoardChair,
+      bio: "Legal & Compliance Professional. Social justice and community empowerment driver with a wealth of expertise in building compliant, scalable programs that create lasting impact.",
     },
-    {
-      name: "Dr. Esohe Oriakhi",
-      role: "Board Chair",
-      bio: "Professor of Social Work with expertise in community development and nonprofit governance.",
-      image: BoardChair,
-    },
-    {
-      name: "Dr. Esohe Oriakhi",
-      role: "Board Chair",
-      bio: "Professor of Social Work with expertise in community development and nonprofit governance.",
-      image: BoardChair,
-    },
-
-    // Add other board members...
   ];
 
   const advisoryCouncil = [
     {
-      name: "Prof. Emeka Okafor",
-      role: "Health Advisor",
-      specialization: "Sickle Cell Research",
+      name: "Samuel Omosuyi",
+      role: "Finance Advisor",
+      linkedin: "https://www.linkedin.com/in/samuel-omosuyi-6b5238149",
+      image: Samuel,
     },
     {
-      name: "Prof. Emeka Okafor",
-      role: "Health Advisor",
-      specialization: "Sickle Cell Research",
+      name: "David Nwosu",
+      role: "Operations Advisor",
+      linkedin: "https://www.linkedin.com/in/nwosudavid",
+      image: David,
     },
-    {
-      name: "Prof. Emeka Okafor",
-      role: "Health Advisor",
-      specialization: "Sickle Cell Research",
-    },
-    {
-      name: "Prof. Emeka Okafor",
-      role: "Health Advisor",
-      specialization: "Sickle Cell Research",
-    },
-    // Add other advisors...
   ];
 
   const videoHighlights = [
@@ -125,11 +103,11 @@ const Leadership = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <main className=" bg-gray-50">
       <SubHeroSection
         image={Team}
-        title=" Our Leadership"
-        subtitle="Guided by experienced professionals committed to Oghosa's vision"
+        title="Guided by Visionary Leadership"
+        subtitle="Meet the passionate individuals driving OGF's mission forward"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Who We Are", href: "/about" },
@@ -147,9 +125,7 @@ const Leadership = () => {
           viewport={{ once: true }}
           className="mb-24"
         >
-          <h2 className="font-montserrat text-3xl font-bold text-oghosa-green mb-12 text-center">
-            Executive Team
-          </h2>
+          <SectionHeader title="Meet Our Executive Team" />
 
           <div className="grid md:grid-cols-2 gap-12">
             {executiveTeam.map((member, index) => (
@@ -232,9 +208,7 @@ const Leadership = () => {
           viewport={{ once: true }}
           className="mb-24 bg-white p-8 rounded-xl shadow-md"
         >
-          <h2 className="font-montserrat text-3xl font-bold text-oghosa-green mb-8 text-center">
-            Our Structure
-          </h2>
+          <SectionHeader title="Our Structure" />
 
           <div className="relative">
             {/* Desktop Structure */}
@@ -315,51 +289,8 @@ const Leadership = () => {
             </div>
           </div>
         </motion.section>
-
         {/* Board of Trustees */}
-        <motion.section
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="mb-24"
-        >
-          <h2 className="font-montserrat text-3xl font-bold text-oghosa-green mb-12 text-center">
-            Board of Trustees
-          </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {boardMembers.map((member, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -5 }}
-                className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all"
-              >
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full h-64 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="font-montserrat text-xl font-bold text-oghosa-green mb-1">
-                    {member.name}
-                  </h3>
-                  <p className="font-dmsans text-oghosa-gold mb-3">
-                    {member.role}
-                  </p>
-                  <p className="font-dmsans text-gray-600 mb-4">{member.bio}</p>
-                  <div className="flex justify-between items-center"></div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.section>
-
-        {/* Advisory Council */}
         <motion.section
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -367,12 +298,10 @@ const Leadership = () => {
           viewport={{ once: true }}
           className="bg-oghosa-green/5 p-12 rounded-2xl"
         >
-          <h2 className="font-montserrat text-3xl font-bold text-oghosa-green mb-12 text-center">
-            Advisory Council
-          </h2>
+          <SectionHeader title="Board of Trustees" />
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {advisoryCouncil.map((advisor, index) => (
+            {boardMembers.map((advisor, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0 }}
@@ -391,8 +320,53 @@ const Leadership = () => {
                   {advisor.role}
                 </p>
                 <p className="font-dmsans text-gray-600 text-sm">
-                  {advisor.specialization}
+                  {advisor.bio}
                 </p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
+        {/* Advisory Council */}
+        <motion.section
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mb-24"
+        >
+          <SectionHeader title="Advisory Council" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {advisoryCouncil.map((member, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5 }}
+                className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all"
+              >
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-64 object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="font-montserrat text-xl font-bold text-oghosa-green mb-1">
+                    {member.name}
+                  </h3>
+                  <p className="font-dmsans text-oghosa-gold mb-2">
+                    {member.role}
+                  </p>
+                  <a
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-oghosa-green transition-colors w-fit"
+                  >
+                    <FiLinkedin className="text-xl" />
+                  </a>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -511,7 +485,7 @@ const Leadership = () => {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <motion.a
-              href="/contact"
+              href="/contact#hero"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-oghosa-green hover:bg-oghosa-green/90 text-white font-montserrat font-bold px-8 py-4 rounded-lg transition-all shadow-lg hover:shadow-xl"
@@ -519,17 +493,17 @@ const Leadership = () => {
               Express Interest
             </motion.a>
             <motion.a
-              href="/about/governance"
+              href="/about/reports"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="border-2 border-oghosa-green text-oghosa-green hover:bg-white font-montserrat font-bold px-8 py-4 rounded-lg transition-all shadow-lg hover:shadow-xl"
             >
-              Learn About Governance
+              See our Annual Report
             </motion.a>
           </div>
         </motion.section>
       </div>
-    </div>
+    </main>
   );
 };
 

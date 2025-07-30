@@ -23,7 +23,7 @@ const Partner = () => {
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Support", href: "/support" },
-          { label: "Partner", href: "/partner" },
+          { label: "Partnerships" },
         ]}
       />
       <PartnershipMissionSection />

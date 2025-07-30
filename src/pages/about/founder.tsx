@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FiArrowRight, FiCalendar, FiAward, FiHeart } from "react-icons/fi";
-import FounderPortrait from "@/assets/images/esohe.jpg";
+import FounderPortrait from "@/assets/images/profile/esohe.jpg";
 import FounderLegacy1 from "@/assets/images/charity-program1.jpg";
 import FounderLegacy2 from "@/assets/images/event-volunteer.jpg";
 import moment1 from "@/assets/images/moment1.jpg";
@@ -10,43 +10,10 @@ import moment4 from "@/assets/images/moment4.jpg";
 import moment5 from "@/assets/images/moment5.jpg";
 import moment6 from "@/assets/images/moment6.jpg";
 import Team from "@/assets/images/team.jpg";
-import { BsQuote } from "react-icons/bs";
 import SubHeroSection from "@/lib/components/common/SubHeroSection";
+import CTASection from "@/lib/components/Home/CTASection";
 
 const Founder = () => {
-  const timelineEvents = [
-    {
-      year: "1985",
-      title: "Birth in Benin City",
-      description:
-        "Born into a family that valued education and community service",
-    },
-    {
-      year: "2007",
-      title: "First Charity Initiative",
-      description:
-        "Organized free tutoring for underprivileged children while in university",
-    },
-    {
-      year: "2012",
-      title: "Tech for Good",
-      description:
-        "Founded a tech incubator focused on social impact solutions",
-    },
-    {
-      year: "2015",
-      title: "Oghosa Godson Foundation",
-      description:
-        "Established the foundation to formalize his charitable work",
-    },
-    {
-      year: "2020",
-      title: "National Recognition",
-      description:
-        "Awarded the Humanitarian Service Medal by the Nigerian government",
-    },
-  ];
-
   const corePrinciples = [
     {
       icon: <FiHeart className="text-oghosa-gold text-2xl" />,
@@ -125,7 +92,7 @@ const Founder = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <main className="">
       {/* Hero Section */}
       <SubHeroSection
         image={Team}
@@ -141,8 +108,8 @@ const Founder = () => {
       {/* Main Content */}
       <div className="container mx-auto px-4 py-16 max-w-6xl">
         {/* Portrait & Quote Section */}
-        <div className="flex flex-col lg:flex-row gap-12 items-start mb-24">
-          <motion.div
+        <div className="flex flex-col lg:flex-row gap-12 items-start mb-24 ">
+          <motion.section
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -155,7 +122,7 @@ const Founder = () => {
               className="rounded-xl shadow-2xl w-full border-4 border-white"
             />
             <div className="absolute -z-10 -bottom-6 -right-6 w-full h-full rounded-xl border-4 border-oghosa-gold/50"></div>
-          </motion.div>
+          </motion.section>
 
           <motion.div
             initial={{ opacity: 0, x: 40 }}
@@ -165,11 +132,9 @@ const Founder = () => {
             className="lg:w-2/3"
           >
             <div className="bg-white/90 p-8 rounded-xl shadow-md relative">
-              <BsQuote className="absolute top-6 left-6 text-oghosa-gold/50 text-5xl" />
               <h2 className="font-montserrat text-3xl font-bold text-oghosa-green mb-6 relative z-10">
                 It Will Be (IWB)
               </h2>
-              <BsQuote className="absolute top-6 left-6 text-oghosa-gold/50 text-5xl" />
 
               <div className="font-dmsans text-gray-700 text-lg leading-relaxed space-y-4 relative z-10">
                 <p>
@@ -222,58 +187,8 @@ const Founder = () => {
           </motion.div>
         </div>
 
-        {/* Timeline Section */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="mb-24"
-        >
-          <h2 className="font-montserrat text-3xl font-bold text-oghosa-green mb-12 text-center">
-            A Life of Impact
-          </h2>
-
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-4 h-full w-0.5 bg-oghosa-gold/30 top-0"></div>
-
-            <div className="space-y-12 pl-12">
-              {timelineEvents.map((event, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="relative"
-                >
-                  {/* Timeline dot */}
-                  <div className="absolute -left-12 top-1 w-8 h-8 rounded-full bg-oghosa-gold border-4 border-white flex items-center justify-center shadow-md">
-                    <FiCalendar className="text-white text-sm" />
-                  </div>
-
-                  <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                    <div className="flex items-center mb-2">
-                      <div className="font-montserrat font-bold text-oghosa-green mr-4 text-xl">
-                        {event.year}
-                      </div>
-                      <div className="font-montserrat font-bold text-gray-800">
-                        {event.title}
-                      </div>
-                    </div>
-                    <p className="font-dmsans text-gray-600">
-                      {event.description}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </motion.div>
-
         {/* Legacy Gallery */}
-        <motion.div
+        <motion.section
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
@@ -325,7 +240,7 @@ const Founder = () => {
               </div>
             </motion.div>
           </div>
-        </motion.div>
+        </motion.section>
 
         {/* Core Principles */}
         <motion.div
@@ -410,47 +325,16 @@ const Founder = () => {
       </section>
 
       {/* CTA Section */}
-      <div className="bg-oghosa-green text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <motion.h2
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="font-montserrat text-3xl md:text-4xl font-bold mb-6"
-          >
-            Continue Oghosa's Legacy
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="font-dmsans text-xl max-w-2xl mx-auto mb-8"
-          >
-            Join us in bringing the "It Will Be" philosophy to communities in
-            need
-          </motion.p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <motion.a
-              href="/donate"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-oghosa-gold hover:bg-oghosa-gold/90 text-oghosa-green font-montserrat font-bold px-8 py-4 rounded-lg transition-all shadow-lg hover:shadow-xl"
-            >
-              Donate in Oghosa's Memory
-            </motion.a>
-            <motion.a
-              href="/volunteer"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-transparent hover:bg-white/10 border-2 border-white text-white font-montserrat font-bold px-8 py-4 rounded-lg transition-all shadow-lg hover:shadow-xl"
-            >
-              Become a Volunteer
-            </motion.a>
-          </div>
-        </div>
-      </div>
-    </div>
+      <CTASection
+        title=" Continue Oghosa's Legacy"
+        subtitle="Join us in bringing the It Will Be philosophy to communities in
+            need"
+        buttonOneText="Donate in Oghosa's Memory"
+        buttonOneLink="/support/donate"
+        buttonTwoText="  Become a Volunteer"
+        buttonTwoLink="/support/volunteer"
+      />
+    </main>
   );
 };
 

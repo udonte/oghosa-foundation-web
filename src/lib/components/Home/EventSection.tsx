@@ -181,7 +181,7 @@ const EventSection = () => {
           className="text-center mt-16"
         >
           <motion.a
-            href="/events"
+            href="/locations/gallery"
             whileHover={{
               scale: 1.05,
               backgroundColor: "rgba(207, 163, 58, 0.1)",

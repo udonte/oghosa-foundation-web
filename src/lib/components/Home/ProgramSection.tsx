@@ -17,7 +17,7 @@ const ProgramsSection = () => {
       description:
         "Comprehensive educational support programs designed to break the cycle of poverty through learning opportunities for underprivileged children.",
       image: EducationImg,
-      link: "/programs/education",
+      link: "/work/education#",
       stats: "1,200+ children supported",
       featured: true,
       details: [
@@ -33,7 +33,7 @@ const ProgramsSection = () => {
       description:
         "Mobile medical units providing essential healthcare services to remote communities with limited access to medical facilities.",
       image: HealthImg,
-      link: "/programs/health",
+      link: "/work/health#",
       stats: "5,000+ screenings conducted",
       details: [
         "Free diagnostic tests (malaria, HIV, blood pressure)",
@@ -48,7 +48,7 @@ const ProgramsSection = () => {
       description:
         "Comprehensive support system for individuals and families affected by sickle cell disease.",
       image: SickleCellImg,
-      link: "/programs/sickle-cell",
+      link: "/work/sickle-cell",
       stats: "300+ families assisted",
       details: [
         "Genetic counseling services",
@@ -63,7 +63,7 @@ const ProgramsSection = () => {
       description:
         "Programs focused on eradicating hunger through both immediate relief and long-term agricultural solutions.",
       image: FoodSecurityImg,
-      link: "/programs/food-security",
+      link: "/work/food-security",
       stats: "10,000+ meals served",
       details: [
         "Community vegetable gardens",
@@ -78,7 +78,7 @@ const ProgramsSection = () => {
       description:
         "Vocational training programs designed to equip youth and adults with marketable skills for economic independence.",
       image: SkillsImg,
-      link: "/programs/vocational",
+      link: "/work/skills-training",
       stats: "500+ trainees empowered",
       details: [
         "6-month intensive courses",
@@ -93,7 +93,7 @@ const ProgramsSection = () => {
       description:
         "Direct assistance programs providing essential resources to vulnerable populations during times of need.",
       image: CharityImg,
-      link: "/programs/charity",
+      link: "/work/outreach",
       stats: "2,500+ beneficiaries",
       details: [
         "Emergency shelter provisions",
@@ -145,7 +145,7 @@ const ProgramsSection = () => {
           className="text-center mt-16"
         >
           <a
-            href="/programs"
+            href="/work"
             className="inline-flex items-center bg-oghosa-green hover:bg-oghosa-gold text-white font-montserrat font-bold py-4 px-10 rounded-lg transition-all duration-300 group shadow-lg hover:shadow-xl"
           >
             Explore All Initiatives

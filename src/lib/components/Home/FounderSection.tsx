@@ -87,7 +87,7 @@ const FounderSection = () => {
               className=" mt-16"
             >
               <a
-                href="/programs"
+                href="/about/founder"
                 className="inline-flex items-center bg-oghosa-green hover:bg-oghosa-gold text-white font-montserrat font-bold py-4 px-10 rounded-lg transition-all duration-300 group shadow-lg hover:shadow-xl"
               >
                 Continue Oghosa's Legacy

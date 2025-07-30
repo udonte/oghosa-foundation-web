@@ -59,7 +59,7 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <main className="">
       {/* Hero Section */}
       <SubHeroSection
         image={Team}
@@ -187,7 +187,7 @@ const About = () => {
           </motion.h2>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              to="/get-involved"
+              to="/support/volunteer#"
               className="bg-oghosa-green hover:bg-oghosa-green/90 text-white font-montserrat font-bold px-8 py-4 rounded-lg transition-colors"
             >
               Join Our Mission
@@ -201,7 +201,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

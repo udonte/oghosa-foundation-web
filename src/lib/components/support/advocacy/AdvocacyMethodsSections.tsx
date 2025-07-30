@@ -9,6 +9,7 @@ import {
   FiLayers,
 } from "react-icons/fi";
 import SectionHeader from "../../common/SectionHeader";
+import { Link } from "react-router";
 
 const AdvocacyMethodsSection = () => {
   const methods = [
@@ -81,12 +82,12 @@ const AdvocacyMethodsSection = () => {
           transition={{ delay: 0.3 }}
           className="text-center mt-16"
         >
-          <a
-            href="#training"
+          <Link
+            to="/contact"
             className="inline-block bg-oghosa-green hover:bg-oghosa-green/90 text-white font-montserrat font-bold py-3 px-8 rounded-md transition-colors"
           >
             Get Advocacy Training
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>
