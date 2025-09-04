@@ -22,10 +22,10 @@ const SectionHeader = ({ title, subtitle, icon }: Props) => {
           </div>
         )}
       </div>
-      <h2 className="font-montserrat text-3xl md:text-4xl font-bold text-oghosa-green mb-4">
+      <h2 className="font-montserrat text-2xl md:text-4xl font-bold text-oghosa-green mb-4 animate-pulse duration-500 transition-colors">
         {title}
       </h2>
-      <div className="w-20 h-1 bg-oghosa-gold mx-auto mb-6"></div>
+      <div className="w-20 h-1 bg-oghosa-gold mx-auto mb-6 animate-bounce duration-500 transition-all"></div>
       <p className="font-dmsans text-lg max-w-3xl mx-auto text-oghosa-gold">
         {subtitle}
       </p>

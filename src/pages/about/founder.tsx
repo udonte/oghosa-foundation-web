@@ -12,6 +12,7 @@ import moment6 from "@/assets/images/moment6.jpg";
 import Team from "@/assets/images/team.jpg";
 import SubHeroSection from "@/lib/components/common/SubHeroSection";
 import CTASection from "@/lib/components/Home/CTASection";
+import SectionHeader from "@/lib/components/common/SectionHeader";
 
 const Founder = () => {
   const corePrinciples = [
@@ -108,7 +109,7 @@ const Founder = () => {
       {/* Main Content */}
       <div className="container mx-auto px-4 py-16 max-w-6xl">
         {/* Portrait & Quote Section */}
-        <div className="flex flex-col lg:flex-row gap-12 items-start mb-24 ">
+        <div className="flex flex-col gap-12 items-center mb-24 ">
           <motion.section
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -116,12 +117,28 @@ const Founder = () => {
             viewport={{ once: true, margin: "-100px" }}
             className="lg:w-1/3 relative"
           >
-            <img
-              src={FounderPortrait}
-              alt="Oghosa Godson"
-              className="rounded-xl shadow-2xl w-full border-4 border-white"
-            />
-            <div className="absolute -z-10 -bottom-6 -right-6 w-full h-full rounded-xl border-4 border-oghosa-gold/50"></div>
+            <div className="flex flex-col items-center">
+              <img
+                src={FounderPortrait}
+                alt="Oghosa Godson"
+                className="rounded-full md:rounded-2xl shadow-2xl shadow-oghosa-gold/30 w-[300px] md:w-full border-4 border-oghosa-gold"
+              />
+              {/* <div className="absolute -z-10 -bottom-6 -right-6 w-full h-full rounded-xl border-4 border-oghosa-gold/50"></div> */}
+              <div className="flex flex-col items-center">
+                <p className="mt-8 font-bold flex flex-col gap-2 items-center justify-center">
+                  <span className="text-3xl text-oghosa-green">
+                    Esohe Oriakhi
+                  </span>{" "}
+                  <span className="text-sm text-oghosa-gold">
+                    LL.B, BL., ICSAN, CAMS
+                  </span>
+                </p>
+
+                <p className="mt-2 italic text-gray-400">
+                  Founder/Executive Director
+                </p>
+              </div>
+            </div>
           </motion.section>
 
           <motion.div
@@ -131,44 +148,72 @@ const Founder = () => {
             viewport={{ once: true, margin: "-100px" }}
             className="lg:w-2/3"
           >
-            <div className="bg-white/90 p-8 rounded-xl shadow-md relative">
-              <h2 className="font-montserrat text-3xl font-bold text-oghosa-green mb-6 relative z-10">
-                It Will Be (IWB)
-              </h2>
+            <div className="bg-white/90 p-4 md:p-8 rounded-xl shadow-md relative">
+              <SectionHeader title="The Heart Behind the Oghosa Godson Foundation" />
 
               <div className="font-dmsans text-gray-700 text-lg leading-relaxed space-y-4 relative z-10">
                 <p>
-                  Oghosa Godson - my beloved younger brother, was not just
-                  family - he was a beacon of kindness, a true friend to all,
-                  embodying humility, and an unwavering commitment to humanity.
-                  He lived a life of selfless generosity, offering help without
-                  discrimination and always meeting people at their level.
-                  Whether it was a struggling family in a rural community, a
-                  friend in need, or an elderly person requiring assistance,
-                  Oghosa was there—ensuring that no one around him went hungry
-                  or felt alone.
+                  My brother, Oghosa Godson, wasn’t just my younger sibling, he
+                  was light, laughter, and the soul of every room he entered. He
+                  was the kind of person who remembered your birthday even if
+                  you forgot his. A listening ear. A gentle encourager. A
+                  protector of dreams. And above all, a true friend to all.
                 </p>
                 <p>
-                  Charity was not just something he did; it was who he was.
-                  Giving was his daily lifestyle, and he never hesitated to
-                  share—even if it meant parting with his last cash to help
-                  another. His compassion knew no bounds, and he believed deeply
-                  in the power of kindness to transform lives.
+                  When we lost him, my world cracked open. Grief is a heavy
+                  thing, but what carried me through were the stories. Messages
+                  from classmates, neighbours, and strangers: “He gave me his
+                  jacket when I had none.” “He waited with me until my ride
+                  came.” “He never judged. Just helped.”
                 </p>
                 <p>
-                  Beyond his charitable spirit, Oghosa was passionate about
-                  technology and had an entrepreneurial and artistic mindset. He
-                  loved learning new things, constantly exploring innovative
-                  ideas and creative expressions. His favorite color, white,
-                  symbolized his purity of heart and clarity of purpose.
+                  That was Oghosa. The boy who gave without asking. The young
+                  man who made space for others, even when he had so little.
                 </p>
                 <p>
-                  One of his most profound beliefs was encapsulated in his
-                  mantra: "It will be("IWB")." This deep-rooted philosophy
-                  guided his life and continues to inspire the mission of the
-                  Oghosa Godson Foundation (OGF)—a movement dedicated to
-                  carrying forward his legacy of kindness, empowerment, and
-                  unconditional support for the less privileged.
+                  But for me, his role was even deeper. I had no lawyers in my
+                  family. No blueprint. I had to figure out how to be an
+                  excellent lawyer completely on my own. And through it all, it
+                  was Oghosa who believed in me the most. He kept me going
+                  through the hard days. He made me feel seen, capable, and
+                  enough.
+                </p>
+                <p>
+                  I remember one moment so vividly: I was preparing for
+                  interviews at a multinational company. What should have been a
+                  joyful season was clouded by unimaginable loss, I had just
+                  buried my best guy. I cried before every interview stage. But
+                  in the middle of that grief, I heard his voice in my heart:
+                  “Go in there and shine. You were built for this.” So I pulled
+                  myself together, and I did exactly that. I got the job.
+                </p>
+                <p>
+                  Not because I was strong, but because I was standing on his
+                  belief in me.
+                </p>
+                <p>
+                  That’s when the question came, one I couldn’t ignore: How do
+                  we make sure his love doesn’t end with him?
+                </p>
+                <p>
+                  The Oghosa Godson Foundation (OGF) is my answer. But it’s not
+                  just mine, it’s all of ours. This isn’t just a charity. It’s a
+                  promise. To continue what he started, lifting others up,
+                  quietly but powerfully.
+                </p>
+                <p>
+                  Beyond his generous spirit, Oghosa was passionate about
+                  technology, with an entrepreneurial and artistic mindset. He
+                  loved learning, constantly exploring innovative ideas and
+                  creative expressions. His favorite color, white, symbolized
+                  his purity of heart and clarity of purpose.
+                </p>
+                <p>
+                  One of his most profound beliefs was captured in his mantra:
+                  “It will be (IWB).” This simple yet powerful philosophy guided
+                  his life, and now inspires the mission of OGF: to carry
+                  forward his legacy of kindness, empowerment, and unconditional
+                  support for the less privileged.
                 </p>
                 <p>
                   Through OGF, we strive to honor his memory by making a lasting
@@ -176,10 +221,19 @@ const Founder = () => {
                   compassionate world lives on.
                 </p>
                 <p>
-                  This Foundation is not just a tribute, but a call to action -
-                  to live with the same openness, care and generosity that
-                  defined Oghosa's life. We invite you to join us in this
-                  mission, and to make a difference in the lives of others.
+                  This foundation is not just a tribute, it is a call to action.
+                  A call to stand in the gap, with heart, with purpose, with
+                  quiet strength.
+                </p>
+                <p>
+                  Our mission is to inspire hope and improve lives by: promoting
+                  education, enhancing health awareness, supporting sickle cell
+                  patients, ensuring food security, and equipping communities
+                  with sustainable skills.
+                </p>
+                <p>
+                  Welcome to the Oghosa Godson Foundation. Together, we can let
+                  love keep working.
                 </p>
               </div>
               <button>Join us</button>
@@ -195,10 +249,7 @@ const Founder = () => {
           viewport={{ once: true }}
           className="mb-24"
         >
-          <h2 className="font-montserrat text-3xl font-bold text-oghosa-green mb-8 text-center">
-            The Legacy Continues
-          </h2>
-
+          <SectionHeader title="The Legacy Continues" />
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div
               whileHover={{ y: -5 }}

@@ -9,6 +9,7 @@ import VideoTestimonials from "@/lib/components/Home/VidTestimonialSection";
 import PartnerShowcase from "@/lib/components/Home/PartnerShowcase";
 import EventSection from "@/lib/components/Home/EventSection";
 import CTASection from "@/lib/components/Home/CTASection";
+import FounderMessage from "@/lib/components/About/FounderMessage";
 
 const Home = () => {
   const slides = [
@@ -49,6 +50,7 @@ const Home = () => {
       <VideoTestimonials />
       <PartnerShowcase />
       <EventSection />
+      <FounderMessage />
       <CTASection />
     </main>
   );

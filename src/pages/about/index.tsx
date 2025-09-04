@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Team from "@/assets/images/team.jpg";
 import OurStory from "@/assets/images/event-volunteer.jpg";
 import Reports from "@/assets/images/reports.jpg";
-import Esohe from "@/assets/images/esohe.jpg";
+import Esohe from "@/assets/images/profile/esohe.jpg";
 import EventBg from "@/assets/images/vision.jpg";
 import SubHeroSection from "@/lib/components/common/SubHeroSection";
 

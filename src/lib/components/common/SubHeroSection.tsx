@@ -97,7 +97,7 @@ const SubHeroSection = ({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: imageLoaded ? 1 : 0, y: imageLoaded ? 0 : 20 }}
             transition={{ duration: 0.6 }}
-            className="font-montserrat text-4xl md:text-5xl font-bold mb-4"
+            className="font-montserrat text-2xl md:text-5xl font-bold mb-4"
           >
             {title}
           </motion.h1>

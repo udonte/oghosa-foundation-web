@@ -25,8 +25,9 @@ import Partner from "@/pages/support/partner";
 import Advocate from "@/pages/support/advocate";
 import GalleryHighlights from "@/pages/locations/galleryHighlights";
 import Impact from "@/pages/locations/impact";
-import Communities from "./pages/locations/communities";
-import { ScrollToTop } from "./lib/components/common/ScrollToTop";
+import Communities from "@/pages/locations/communities";
+import { ScrollToTop } from "@/lib/components/common/ScrollToTop";
+import PrivacyPolicy from "@/pages/privacy";
 
 const App = () => {
   return (
@@ -36,6 +37,7 @@ const App = () => {
         {/* main pages */}
         <Route path="/" element={<CoreLayout />}>
           <Route index element={<Home />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           {/* about pages */}
           <Route path="/about" element={<About />} />
           <Route path="/about/profile" element={<Profile />} />

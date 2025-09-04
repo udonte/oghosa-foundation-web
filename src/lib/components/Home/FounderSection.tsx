@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FiArrowRight } from "react-icons/fi";
-import Esohe from "@/assets/images/esohe.jpg";
+import Esohe from "@/assets/images/profile/esohe.jpg";
 import { Link } from "react-router";
 
 const FounderSection = () => {
